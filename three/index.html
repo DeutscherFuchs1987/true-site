@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Название компании | Главная страница</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Иконки Tabler Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/dist/tabler-icons.min.css">
+    <!-- Шрифты Inter + Playfair Display -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2220%22 fill=%22%234f46e5%22/><text x=%2250%22 y=%2265%22 font-family=%22Arial%22 font-size=%2250%22 text-anchor=%22middle%22 fill=%22white%22>N</text></svg>">
+</head>
+<body>
+    <!-- Шапка сайта -->
+    <header class="header" id="header">
+        <div class="container">
+            <div class="header-inner">
+                <!-- Логотип -->
+                <a href="/" class="logo" aria-label="На главную страницу">
+                    <div class="logo-icon">
+                        <i class="ti ti-building-community"></i>
+                    </div>
+                    <div class="logo-text">
+                        <span class="logo-primary">Название</span>
+                        <span class="logo-secondary">Компании</span>
+                    </div>
+                </a>
+
+                <!-- Основная навигация -->
+                <nav class="main-nav" aria-label="Основная навигация">
+                    <ul class="nav-list">
+                        <li class="nav-item"><a href="#about" class="nav-link">О нас</a></li>
+                        <li class="nav-item"><a href="#services" class="nav-link">Услуги</a></li>
+                        <li class="nav-item"><a href="#portfolio" class="nav-link">Портфолио</a></li>
+                        <li class="nav-item"><a href="#blog" class="nav-link">Блог</a></li>
+                        <li class="nav-item"><a href="#contact" class="nav-link">Контакты</a></li>
+                    </ul>
+                </nav>
+
+                <!-- Кнопки действий -->
+                <div class="header-actions">
+                    <button class="btn btn-text" id="loginBtn">
+                        <i class="ti ti-login"></i>
+                        <span>Вход</span>
+                    </button>
+                    <button class="btn btn-primary" id="registerBtn">
+                        <i class="ti ti-user-plus"></i>
+                        <span>Регистрация</span>
+                    </button>
+                </div>
+
+                <!-- Бургер-меню -->
+                <button class="mobile-toggle" id="mobileToggle" aria-label="Открыть меню" aria-expanded="false">
+                    <span class="toggle-line"></span>
+                    <span class="toggle-line"></span>
+                    <span class="toggle-line"></span>
+                </button>
+            </div>
+
+            <!-- Мобильная навигация -->
+            <div class="mobile-nav" id="mobileNav">
+                <nav class="mobile-nav-inner" aria-label="Мобильная навигация">
+                    <ul class="mobile-nav-list">
+                        <li><a href="#about" class="mobile-nav-link">
+                            <i class="ti ti-info-circle"></i>
+                            <span>О нас</span>
+                        </a></li>
+                        <li><a href="#services" class="mobile-nav-link">
+                            <i class="ti ti-briefcase"></i>
+                            <span>Услуги</span>
+                        </a></li>
+                        <li><a href="#portfolio" class="mobile-nav-link">
+                            <i class="ti ti-photo"></i>
+                            <span>Портфолио</span>
+                        </a></li>
+                        <li><a href="#blog" class="mobile-nav-link">
+                            <i class="ti ti-news"></i>
+                            <span>Блог</span>
+                        </a></li>
+                        <li><a href="#contact" class="mobile-nav-link">
+                            <i class="ti ti-phone"></i>
+                            <span>Контакты</span>
+                        </a></li>
+                        <li class="mobile-nav-divider"></li>
+                        <li><a href="#" class="mobile-nav-link mobile-nav-login" id="mobileLoginBtn">
+                            <i class="ti ti-login"></i>
+                            <span>Вход в аккаунт</span>
+                        </a></li>
+                        <li><a href="#" class="mobile-nav-link mobile-nav-primary" id="mobileRegisterBtn">
+                            <i class="ti ti-user-plus"></i>
+                            <span>Создать аккаунт</span>
+                        </a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Основной контент -->
+    <main>
+        <!-- ГЛАВНЫЙ СЛАЙДЕР -->
+        <section class="hero-slider" aria-label="Главный слайдер">
+            <div class="slider-container">
+                <!-- Слайды -->
+                <div class="slides">
+                    <!-- Слайд 1 -->
+                    <div class="slide active" data-slide="1">
+                        <div class="slide-bg" style="background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.3)), url('https://images.unsplash.com/photo-1497366754035-f200968a6e72?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2069&q=80')"></div>
+                        <div class="container">
+                            <div class="slide-content">
+                                <div class="slide-badge">
+                                    <span>Инновационные решения</span>
+                                </div>
+                                <h1 class="slide-title">
+                                    <span class="title-line">Профессиональные услуги</span>
+                                    <span class="title-line">для вашего бизнеса</span>
+                                </h1>
+                                <p class="slide-text">
+                                    Мы помогаем компаниям расти и достигать успеха с помощью 
+                                    современных технологий и экспертного подхода.
+                                </p>
+                                <div class="slide-actions">
+                                    <a href="#contact" class="btn btn-primary btn-lg">
+                                        <i class="ti ti-phone"></i>
+                                        <span>Связаться с нами</span>
+                                    </a>
+                                    <a href="#services" class="btn btn-light btn-lg">
+                                        <i class="ti ti-play"></i>
+                                        <span>Наши услуги</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Слайд 2 -->
+                    <div class="slide" data-slide="2">
+                        <div class="slide-bg" style="background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.3)), url('https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80')"></div>
+                        <div class="container">
+                            <div class="slide-content">
+                                <div class="slide-badge">
+                                    <span>Надежность и качество</span>
+                                </div>
+                                <h1 class="slide-title">
+                                    <span class="title-line">Гарантия результата</span>
+                                    <span class="title-line">и своевременной реализации</span>
+                                </h1>
+                                <p class="slide-text">
+                                    Более 15 лет опыта в реализации сложных проектов. 
+                                    Доверьтесь профессионалам своего дела.
+                                </p>
+                                <div class="slide-actions">
+                                    <a href="#portfolio" class="btn btn-primary btn-lg">
+                                        <i class="ti ti-briefcase"></i>
+                                        <span>Смотреть проекты</span>
+                                    </a>
+                                    <a href="#about" class="btn btn-light btn-lg">
+                                        <i class="ti ti-users"></i>
+                                        <span>О компании</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Слайд 3 -->
+                    <div class="slide" data-slide="3">
+                        <div class="slide-bg" style="background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.3)), url('https://images.unsplash.com/photo-1559136555-9303baea8ebd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80')"></div>
+                        <div class="container">
+                            <div class="slide-content">
+                                <div class="slide-badge">
+                                    <span>Современные технологии</span>
+                                </div>
+                                <h1 class="slide-title">
+                                    <span class="title-line">Технологии будущего</span>
+                                    <span class="title-line">уже сегодня</span>
+                                </h1>
+                                <p class="slide-text">
+                                    Используем передовые решения для создания 
+                                    эффективных и масштабируемых продуктов.
+                                </p>
+                                <div class="slide-actions">
+                                    <a href="#services" class="btn btn-primary btn-lg">
+                                        <i class="ti ti-device-desktop"></i>
+                                        <span>Технологии</span>
+                                    </a>
+                                    <a href="#contact" class="btn btn-light btn-lg">
+                                        <i class="ti ti-calendar"></i>
+                                        <span>Записаться на консультацию</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Навигация слайдера -->
+                <div class="slider-nav">
+                    <button class="slider-prev" aria-label="Предыдущий слайд">
+                        <i class="ti ti-chevron-left"></i>
+                    </button>
+                    
+                    <div class="slider-dots">
+                        <button class="slider-dot active" data-slide="1" aria-label="Перейти к слайду 1"></button>
+                        <button class="slider-dot" data-slide="2" aria-label="Перейти к слайду 2"></button>
+                        <button class="slider-dot" data-slide="3" aria-label="Перейти к слайду 3"></button>
+                    </div>
+                    
+                    <button class="slider-next" aria-label="Следующий слайд">
+                        <i class="ti ti-chevron-right"></i>
+                    </button>
+                </div>
+                
+                <!-- Форма поиска поверх слайдера -->
+                <div class="slider-search">
+                    <div class="container">
+                        <form class="search-box" role="search" aria-label="Поиск по сайту">
+                            <div class="search-wrapper">
+                                <div class="search-icon">
+                                    <i class="ti ti-search"></i>
+                                </div>
+                                <input type="search" 
+                                       class="search-input" 
+                                       placeholder="Поиск услуг, статей, информации..."
+                                       aria-label="Поле поиска">
+                                <button type="submit" class="search-btn">
+                                    <span>Найти</span>
+                                    <i class="ti ti-arrow-right"></i>
+                                </button>
+                            </div>
+                            <div class="search-suggestions">
+                                <span class="suggestion">Популярное:</span>
+                                <a href="#" class="suggestion-tag">Консультация</a>
+                                <a href="#" class="suggestion-tag">Поддержка</a>
+                                <a href="#" class="suggestion-tag">Разработка</a>
+                                <a href="#" class="suggestion-tag">Дизайн</a>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Секция услуг -->
+        <section class="services" id="services">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Наши услуги</h2>
+                    <p class="section-subtitle">
+                        Широкий спектр профессиональных услуг для удовлетворения 
+                        ваших потребностей
+                    </p>
+                </div>
+                
+                <div class="services-grid">
+                    <article class="service-card">
+                        <div class="service-icon">
+                            <i class="ti ti-device-desktop"></i>
+                        </div>
+                        <h3 class="service-title">Веб-разработка</h3>
+                        <p class="service-description">
+                            Создание современных и функциональных веб-сайтов 
+                            и веб-приложений любой сложности.
+                        </p>
+                        <a href="#" class="service-link">
+                            <span>Подробнее</span>
+                            <i class="ti ti-arrow-right"></i>
+                        </a>
+                    </article>
+                    
+                    <article class="service-card">
+                        <div class="service-icon">
+                            <i class="ti ti-bulb"></i>
+                        </div>
+                        <h3 class="service-title">Консалтинг</h3>
+                        <p class="service-description">
+                            Экспертное консультирование по вопросам развития 
+                            бизнеса и оптимизации процессов.
+                        </p>
+                        <a href="#" class="service-link">
+                            <span>Подробнее</span>
+                            <i class="ti ti-arrow-right"></i>
+                        </a>
+                    </article>
+                    
+                    <article class="service-card">
+                        <div class="service-icon">
+                            <i class="ti ti-brand-instagram"></i>
+                        </div>
+                        <h3 class="service-title">Маркетинг</h3>
+                        <p class="service-description">
+                            Комплексное продвижение вашего бренда в интернете 
+                            и социальных сетях для увеличения продаж.
+                        </p>
+                        <a href="#" class="service-link">
+                            <span>Подробнее</span>
+                            <i class="ti ti-arrow-right"></i>
+                        </a>
+                    </article>
+                    
+                    <article class="service-card">
+                        <div class="service-icon">
+                            <i class="ti ti-headset"></i>
+                        </div>
+                        <h3 class="service-title">Поддержка</h3>
+                        <p class="service-description">
+                            Круглосуточная техническая поддержка и обслуживание 
+                            ваших систем и приложений.
+                        </p>
+                        <a href="#" class="service-link">
+                            <span>Подробнее</span>
+                            <i class="ti ti-arrow-right"></i>
+                        </a>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Секция о компании -->
+        <section class="about" id="about">
+            <div class="container">
+                <div class="about-grid">
+                    <div class="about-content">
+                        <div class="section-header">
+                            <h2 class="section-title">О нашей компании</h2>
+                            <p class="section-subtitle">
+                                Мы — команда профессионалов, объединенных общей целью: 
+                                помогать клиентам достигать успеха в современном мире.
+                            </p>
+                        </div>
+                        
+                        <div class="about-features">
+                            <div class="feature">
+                                <i class="ti ti-check"></i>
+                                <div class="feature-content">
+                                    <h4>Профессионализм</h4>
+                                    <p>Высококвалифицированные специалисты с многолетним опытом в различных сферах</p>
+                                </div>
+                            </div>
+                            
+                            <div class="feature">
+                                <i class="ti ti-check"></i>
+                                <div class="feature-content">
+                                    <h4>Надежность</h4>
+                                    <p>Гарантия качества и соблюдение сроков выполнения работ по договору</p>
+                                </div>
+                            </div>
+                            
+                            <div class="feature">
+                                <i class="ti ti-check"></i>
+                                <div class="feature-content">
+                                    <h4>Индивидуальный подход</h4>
+                                    <p>Решение задач с учетом специфики и потребностей каждого клиента</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="about-stats">
+                            <div class="stat">
+                                <span class="stat-number">500+</span>
+                                <span class="stat-label">Довольных клиентов</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-number">98%</span>
+                                <span class="stat-label">Успешных проектов</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-number">24/7</span>
+                                <span class="stat-label">Поддержка</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="about-image">
+                        <div class="image-wrapper">
+                            <div class="image-card">
+                                <i class="ti ti-users"></i>
+                            </div>
+                            <div class="image-badge">
+                                <i class="ti ti-award"></i>
+                                <span>Лидер рынка</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Секция CTA -->
+        <section class="cta">
+            <div class="container">
+                <div class="cta-content">
+                    <h2 class="cta-title">Готовы начать сотрудничество?</h2>
+                    <p class="cta-text">
+                        Свяжитесь с нами сегодня, чтобы обсудить ваши потребности 
+                        и получить индивидуальное предложение.
+                    </p>
+                    <div class="cta-actions">
+                        <a href="#contact" class="btn btn-primary btn-lg">
+                            <i class="ti ti-phone"></i>
+                            <span>Связаться</span>
+                        </a>
+                        <a href="#" class="btn btn-light btn-lg">
+                            <i class="ti ti-file-text"></i>
+                            <span>Скачать презентацию</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Подвал сайта -->
+    <footer class="footer" id="contact">
+        <div class="container">
+            <div class="footer-main">
+                <div class="footer-brand">
+                    <a href="/" class="footer-logo">
+                        <div class="logo-icon">
+                            <i class="ti ti-building-community"></i>
+                        </div>
+                        <div class="logo-text">
+                            <span class="logo-primary">Название</span>
+                            <span class="logo-secondary">Компании</span>
+                        </div>
+                    </a>
+                    <p class="footer-description">
+                        Профессиональные решения для вашего бизнеса. 
+                        Мы помогаем компаниям расти и развиваться с 2008 года.
+                    </p>
+                    <div class="footer-social">
+                        <a href="#" aria-label="ВКонтакте"><i class="ti ti-brand-vk"></i></a>
+                        <a href="#" aria-label="Telegram"><i class="ti ti-brand-telegram"></i></a>
+                        <a href="#" aria-label="YouTube"><i class="ti ti-brand-youtube"></i></a>
+                        <a href="#" aria-label="WhatsApp"><i class="ti ti-brand-whatsapp"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-links">
+                    <div class="link-group">
+                        <h3 class="link-title">Компания</h3>
+                        <ul class="link-list">
+                            <li><a href="#about">О нас</a></li>
+                            <li><a href="#services">Услуги</a></li>
+                            <li><a href="#portfolio">Портфолио</a></li>
+                            <li><a href="#blog">Блог</a></li>
+                            <li><a href="#contact">Контакты</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="link-group">
+                        <h3 class="link-title">Услуги</h3>
+                        <ul class="link-list">
+                            <li><a href="#">Веб-разработка</a></li>
+                            <li><a href="#">Консалтинг</a></li>
+                            <li><a href="#">Маркетинг</a></li>
+                            <li><a href="#">Поддержка</a></li>
+                            <li><a href="#">Дизайн</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="link-group">
+                        <h3 class="link-title">Контакты</h3>
+                        <ul class="link-list contact-list">
+                            <li>
+                                <i class="ti ti-map-pin"></i>
+                                <span>г. Москва, ул. Примерная, д. 1</span>
+                            </li>
+                            <li>
+                                <i class="ti ti-phone"></i>
+                                <a href="tel:+79991234567">+7 (999) 123-45-67</a>
+                            </li>
+                            <li>
+                                <i class="ti ti-mail"></i>
+                                <a href="mailto:info@example.com">info@example.com</a>
+                            </li>
+                            <li>
+                                <i class="ti ti-clock"></i>
+                                <span>Пн-Пт: 9:00–18:00</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p class="copyright">
+                    &copy; 2023 Название Компании. Все права защищены.
+                </p>
+                <div class="legal-links">
+                    <a href="#">Политика конфиденциальности</a>
+                    <a href="#">Условия использования</a>
+                    <a href="#">Карта сайта</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Модальные окна (остаются без изменений) -->
+    <div class="modal" id="loginModal" role="dialog" aria-hidden="true" aria-labelledby="loginModalTitle">
+        <!-- Содержимое модального окна входа -->
+    </div>
+
+    <div class="modal" id="registerModal" role="dialog" aria-hidden="true" aria-labelledby="registerModalTitle">
+        <!-- Содержимое модального окна регистрации -->
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
