@@ -1,0 +1,609 @@
+<!DOCTYPE html>
+<html lang="ru" data-bs-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Название Компании | Главная</title>
+    
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+    <!-- Дополнительные шрифты (опционально) -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+    
+    <!-- Кастомные стили -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="https://via.placeholder.com/32/0d6efd/FFFFFF?text=BS">
+</head>
+<body>
+    <!-- Шапка сайта -->
+    <header class="header fixed-top bg-white shadow-sm" id="header">
+        <nav class="navbar navbar-expand-lg py-3">
+            <div class="container">
+                <!-- Логотип -->
+                <a class="navbar-brand fw-bold fs-3 text-primary d-flex align-items-center" href="#">
+                    <i class="bi bi-rocket-takeoff me-2"></i>
+                    <span class="d-none d-md-inline">НазваниеКомпании</span>
+                    <span class="d-inline d-md-none">НК</span>
+                </a>
+
+                <!-- Бургер-кнопка для мобильных -->
+                <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" 
+                        aria-controls="navbarNav" aria-expanded="false" aria-label="Переключить навигацию">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Основное меню -->
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link fw-medium active" href="#"><i class="bi bi-briefcase me-1"></i> Услуги</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link fw-medium" href="#"><i class="bi bi-info-circle me-1"></i> О нас</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link fw-medium" href="#"><i class="bi bi-images me-1"></i> Портфолио</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link fw-medium" href="#"><i class="bi bi-journal-text me-1"></i> Блог</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link fw-medium" href="#"><i class="bi bi-telephone me-1"></i> Контакты</a>
+                        </li>
+                    </ul>
+
+                    <!-- Кнопки авторизации -->
+                    <div class="d-flex align-items-center gap-2">
+                        <button class="btn btn-outline-primary btn-sm px-3" data-bs-toggle="modal" data-bs-target="#loginModal">
+                            <i class="bi bi-box-arrow-in-right"></i>
+                            <span class="d-none d-md-inline ms-1">Вход</span>
+                        </button>
+                        <button class="btn btn-primary btn-sm px-3" data-bs-toggle="modal" data-bs-target="#registerModal">
+                            <i class="bi bi-person-plus"></i>
+                            <span class="d-none d-md-inline ms-1">Регистрация</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Основное содержимое -->
+    <main class="pt-5 mt-5">
+        <!-- Герой-секция -->
+        <section class="hero py-5 py-lg-6 bg-gradient">
+            <div class="container py-4 py-lg-5">
+                <div class="row align-items-center g-5">
+                    <div class="col-lg-6">
+                        <h1 class="display-4 fw-bold mb-4">Заголовок, который привлекает внимание</h1>
+                        <p class="lead text-muted mb-4">
+                            Краткое и убедительное описание вашего основного предложения, продукта или услуги. 
+                            Почему именно вы?
+                        </p>
+                        
+                        <!-- Форма поиска -->
+                        <div class="search-form bg-white rounded-3 shadow p-3 p-md-4 mb-4">
+                            <form class="row g-2">
+                                <div class="col-md-8">
+                                    <div class="input-group input-group-lg">
+                                        <span class="input-group-text bg-transparent border-0 text-muted">
+                                            <i class="bi bi-search"></i>
+                                        </span>
+                                        <input type="search" class="form-control border-0 ps-0" 
+                                               placeholder="Что вы ищете?" aria-label="Поле поиска">
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <button type="submit" class="btn btn-primary btn-lg w-100">
+                                        <i class="bi bi-search me-2"></i>Найти
+                                    </button>
+                                </div>
+                            </form>
+                            <p class="text-muted small mt-2 mb-0 ps-4">Например: веб-дизайн, консультация, документы</p>
+                        </div>
+                        
+                        <div class="d-flex flex-wrap gap-2">
+                            <a href="#" class="btn btn-primary px-4 py-3">Начать сейчас</a>
+                            <a href="#" class="btn btn-outline-primary px-4 py-3">Узнать больше</a>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="hero-image text-center">
+                            <div class="position-relative d-inline-block">
+                                <div class="bg-primary bg-opacity-10 rounded-circle p-5 p-lg-6">
+                                    <i class="bi bi-rocket-takeoff-fill text-primary" style="font-size: 8rem;"></i>
+                                </div>
+                                <div class="position-absolute top-0 start-100 translate-middle bg-accent text-white rounded-circle p-2 shadow">
+                                    <i class="bi bi-lightning-charge-fill fs-4"></i>
+                                </div>
+                                <div class="position-absolute bottom-0 end-0 bg-success text-white rounded-circle p-2 shadow">
+                                    <i class="bi bi-shield-check fs-4"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Секция "Преимущества" -->
+        <section class="py-5 py-lg-6 bg-light">
+            <div class="container">
+                <div class="text-center mb-5">
+                    <h2 class="display-5 fw-bold mb-3">Почему выбирают нас?</h2>
+                    <p class="lead text-muted mx-auto" style="max-width: 700px;">
+                        Три ключевых преимущества, которые выделяют вас на фоне конкурентов.
+                    </p>
+                </div>
+                
+                <div class="row g-4">
+                    <div class="col-md-4">
+                        <div class="card h-100 border-0 shadow-sm hover-shadow transition-all">
+                            <div class="card-body text-center p-4 p-lg-5">
+                                <div class="icon-wrapper bg-primary bg-opacity-10 text-primary rounded-circle p-4 mb-4 mx-auto" style="width: 80px; height: 80px;">
+                                    <i class="bi bi-lightning-charge-fill fs-2"></i>
+                                </div>
+                                <h3 class="h4 fw-bold mb-3">Быстро и эффективно</h3>
+                                <p class="text-muted mb-0">
+                                    Описание первого важного преимущества вашей компании или услуги. 
+                                    Экономьте время с нашими решениями.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-md-4">
+                        <div class="card h-100 border-0 shadow-sm hover-shadow transition-all">
+                            <div class="card-body text-center p-4 p-lg-5">
+                                <div class="icon-wrapper bg-success bg-opacity-10 text-success rounded-circle p-4 mb-4 mx-auto" style="width: 80px; height: 80px;">
+                                    <i class="bi bi-shield-check fs-2"></i>
+                                </div>
+                                <h3 class="h4 fw-bold mb-3">Надежность</h3>
+                                <p class="text-muted mb-0">
+                                    Описание гарантии качества, безопасности или стабильности. 
+                                    Ваши данные в полной безопасности.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-md-4">
+                        <div class="card h-100 border-0 shadow-sm hover-shadow transition-all">
+                            <div class="card-body text-center p-4 p-lg-5">
+                                <div class="icon-wrapper bg-warning bg-opacity-10 text-warning rounded-circle p-4 mb-4 mx-auto" style="width: 80px; height: 80px;">
+                                    <i class="bi bi-headset fs-2"></i>
+                                </div>
+                                <h3 class="h4 fw-bold mb-3">Поддержка 24/7</h3>
+                                <p class="text-muted mb-0">
+                                    Всегда на связи, чтобы помочь с любыми вопросами и проблемами. 
+                                    Наша команда всегда готова помочь.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Информационная секция с призывом к действию -->
+        <section class="py-5 py-lg-6">
+            <div class="container">
+                <div class="row align-items-center g-5">
+                    <div class="col-lg-6">
+                        <div class="info-image bg-gradient-primary rounded-3 p-4 p-lg-5 text-center">
+                            <i class="bi bi-graph-up-arrow text-white" style="font-size: 8rem;"></i>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <h2 class="display-6 fw-bold mb-4">Заголовок для призыва к действию или информации</h2>
+                        <p class="text-muted mb-4">
+                            Более подробный текст о вашей миссии, проекте или услуге. Объясните, почему клиенты 
+                            должны выбрать именно вас и какие результаты они получат.
+                        </p>
+                        
+                        <ul class="list-unstyled mb-4">
+                            <li class="mb-2">
+                                <i class="bi bi-check-circle-fill text-success me-2"></i>
+                                <span>Пункт первый преимущества с подробным описанием</span>
+                            </li>
+                            <li class="mb-2">
+                                <i class="bi bi-check-circle-fill text-success me-2"></i>
+                                <span>Пункт второй преимущества с подробным описанием</span>
+                            </li>
+                            <li class="mb-2">
+                                <i class="bi bi-check-circle-fill text-success me-2"></i>
+                                <span>Пункт третий преимущества с подробным описанием</span>
+                            </li>
+                            <li class="mb-2">
+                                <i class="bi bi-check-circle-fill text-success me-2"></i>
+                                <span>Пункт четвертый преимущества с подробным описанием</span>
+                            </li>
+                        </ul>
+                        
+                        <div class="d-flex flex-wrap gap-3">
+                            <a href="#" class="btn btn-primary btn-lg px-4">
+                                <i class="bi bi-play-circle me-2"></i>Начать бесплатно
+                            </a>
+                            <a href="#" class="btn btn-outline-primary btn-lg px-4">
+                                <i class="bi bi-info-circle me-2"></i>Подробнее
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Подвал сайта -->
+    <footer class="bg-dark text-white py-5">
+        <div class="container">
+            <div class="row g-4">
+                <!-- Бренд -->
+                <div class="col-lg-4">
+                    <a class="navbar-brand fw-bold fs-3 text-white d-flex align-items-center mb-3" href="#">
+                        <i class="bi bi-rocket-takeoff me-2"></i>
+                        НазваниеКомпании
+                    </a>
+                    <p class="text-white-50 mb-4">
+                        Краткий слоган или описание миссии компании. Мы помогаем бизнесу расти 
+                        и развиваться с помощью современных технологий.
+                    </p>
+                    <div class="social-icons d-flex gap-3">
+                        <a href="#" class="text-white fs-5" aria-label="ВКонтакте">
+                            <i class="bi bi-vk"></i>
+                        </a>
+                        <a href="#" class="text-white fs-5" aria-label="Telegram">
+                            <i class="bi bi-telegram"></i>
+                        </a>
+                        <a href="#" class="text-white fs-5" aria-label="YouTube">
+                            <i class="bi bi-youtube"></i>
+                        </a>
+                        <a href="#" class="text-white fs-5" aria-label="GitHub">
+                            <i class="bi bi-github"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Быстрые ссылки -->
+                <div class="col-lg-2 col-md-6">
+                    <h5 class="fw-bold mb-4">Навигация</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="#" class="text-white-50 text-decoration-none hover-white">Главная</a></li>
+                        <li class="mb-2"><a href="#" class="text-white-50 text-decoration-none hover-white">Услуги</a></li>
+                        <li class="mb-2"><a href="#" class="text-white-50 text-decoration-none hover-white">О нас</a></li>
+                        <li class="mb-2"><a href="#" class="text-white-50 text-decoration-none hover-white">Портфолио</a></li>
+                        <li class="mb-2"><a href="#" class="text-white-50 text-decoration-none hover-white">Блог</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Юридическое -->
+                <div class="col-lg-2 col-md-6">
+                    <h5 class="fw-bold mb-4">Правовая информация</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="#" class="text-white-50 text-decoration-none hover-white">Политика конфиденциальности</a></li>
+                        <li class="mb-2"><a href="#" class="text-white-50 text-decoration-none hover-white">Условия использования</a></li>
+                        <li class="mb-2"><a href="#" class="text-white-50 text-decoration-none hover-white">Договор оферты</a></li>
+                        <li class="mb-2"><a href="#" class="text-white-50 text-decoration-none hover-white">Карта сайта</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Контакты -->
+                <div class="col-lg-4">
+                    <h5 class="fw-bold mb-4">Контакты</h5>
+                    <address class="text-white-50">
+                        <p class="mb-2 d-flex align-items-start">
+                            <i class="bi bi-geo-alt me-2 mt-1"></i>
+                            <span>г. Москва, ул. Примерная, д. 1, офис 123</span>
+                        </p>
+                        <p class="mb-2">
+                            <i class="bi bi-telephone me-2"></i>
+                            <a href="tel:+79999999999" class="text-white-50 text-decoration-none hover-white">+7 (999) 999-99-99</a>
+                        </p>
+                        <p class="mb-2">
+                            <i class="bi bi-envelope me-2"></i>
+                            <a href="mailto:info@example.com" class="text-white-50 text-decoration-none hover-white">info@example.com</a>
+                        </p>
+                        <p class="mb-0">
+                            <i class="bi bi-clock me-2"></i>
+                            <span>Пн-Пт: 9:00–18:00</span>
+                        </p>
+                    </address>
+                </div>
+            </div>
+            
+            <hr class="my-5 border-secondary">
+            
+            <!-- Копирайт -->
+            <div class="row">
+                <div class="col-md-6">
+                    <p class="text-white-50 mb-3 mb-md-0">
+                        &copy; 2023 НазваниеКомпании. Все права защищены.
+                    </p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <p class="text-white-50 mb-0">
+                        Сделано с <i class="bi bi-heart-fill text-danger"></i> для наших клиентов
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Модальное окно ВХОДА -->
+    <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content border-0 shadow">
+                <div class="modal-header border-0 pb-0">
+                    <h2 class="modal-title fw-bold h4" id="loginModalLabel">
+                        <i class="bi bi-box-arrow-in-right text-primary me-2"></i>Вход в аккаунт
+                    </h2>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть"></button>
+                </div>
+                <div class="modal-body pt-0">
+                    <form id="loginForm">
+                        <div class="mb-3">
+                            <label for="loginEmail" class="form-label fw-medium">Электронная почта</label>
+                            <div class="input-group">
+                                <span class="input-group-text bg-transparent border-end-0">
+                                    <i class="bi bi-envelope text-muted"></i>
+                                </span>
+                                <input type="email" class="form-control border-start-0" id="loginEmail" 
+                                       placeholder="example@mail.com" required>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="loginPassword" class="form-label fw-medium">Пароль</label>
+                            <div class="input-group">
+                                <span class="input-group-text bg-transparent border-end-0">
+                                    <i class="bi bi-lock text-muted"></i>
+                                </span>
+                                <input type="password" class="form-control border-start-0" id="loginPassword" 
+                                       placeholder="Ваш пароль" required>
+                                <button class="btn btn-outline-secondary border-start-0" type="button" id="togglePassword">
+                                    <i class="bi bi-eye"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="d-flex justify-content-between align-items-center mb-4">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="rememberMe">
+                                <label class="form-check-label text-muted small" for="rememberMe">Запомнить меня</label>
+                            </div>
+                            <a href="#" class="text-primary text-decoration-none small">Забыли пароль?</a>
+                        </div>
+                        <button type="submit" class="btn btn-primary w-100 py-2 mb-3">
+                            Войти в аккаунт
+                        </button>
+                        <div class="text-center">
+                            <p class="text-muted small mb-0">
+                                Нет аккаунта? 
+                                <a href="#" class="text-primary text-decoration-none fw-medium" 
+                                   data-bs-toggle="modal" data-bs-target="#registerModal" data-bs-dismiss="modal">
+                                    Зарегистрируйтесь
+                                </a>
+                            </p>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Модальное окно РЕГИСТРАЦИИ -->
+    <div class="modal fade" id="registerModal" tabindex="-1" aria-labelledby="registerModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content border-0 shadow">
+                <div class="modal-header border-0 pb-0">
+                    <h2 class="modal-title fw-bold h4" id="registerModalLabel">
+                        <i class="bi bi-person-plus text-primary me-2"></i>Регистрация
+                    </h2>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть"></button>
+                </div>
+                <div class="modal-body pt-0">
+                    <form id="registerForm">
+                        <div class="row g-3">
+                            <div class="col-md-6">
+                                <label for="regName" class="form-label fw-medium">Имя</label>
+                                <div class="input-group">
+                                    <span class="input-group-text bg-transparent border-end-0">
+                                        <i class="bi bi-person text-muted"></i>
+                                    </span>
+                                    <input type="text" class="form-control border-start-0" id="regName" 
+                                           placeholder="Ваше имя" required>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="regLastName" class="form-label fw-medium">Фамилия</label>
+                                <div class="input-group">
+                                    <span class="input-group-text bg-transparent border-end-0">
+                                        <i class="bi bi-person text-muted"></i>
+                                    </span>
+                                    <input type="text" class="form-control border-start-0" id="regLastName" 
+                                           placeholder="Ваша фамилия">
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="mb-3 mt-3">
+                            <label for="regEmail" class="form-label fw-medium">Электронная почта</label>
+                            <div class="input-group">
+                                <span class="input-group-text bg-transparent border-end-0">
+                                    <i class="bi bi-envelope text-muted"></i>
+                                </span>
+                                <input type="email" class="form-control border-start-0" id="regEmail" 
+                                       placeholder="example@mail.com" required>
+                            </div>
+                        </div>
+                        
+                        <div class="mb-3">
+                            <label for="regPassword" class="form-label fw-medium">Пароль</label>
+                            <div class="input-group">
+                                <span class="input-group-text bg-transparent border-end-0">
+                                    <i class="bi bi-lock text-muted"></i>
+                                </span>
+                                <input type="password" class="form-control border-start-0" id="regPassword" 
+                                       placeholder="Придумайте пароль" required>
+                            </div>
+                            <div class="form-text">Минимум 8 символов, включая цифры и буквы</div>
+                        </div>
+                        
+                        <div class="mb-3">
+                            <label for="regPasswordConfirm" class="form-label fw-medium">Подтверждение пароля</label>
+                            <div class="input-group">
+                                <span class="input-group-text bg-transparent border-end-0">
+                                    <i class="bi bi-lock text-muted"></i>
+                                </span>
+                                <input type="password" class="form-control border-start-0" id="regPasswordConfirm" 
+                                       placeholder="Повторите пароль" required>
+                            </div>
+                        </div>
+                        
+                        <div class="form-check mb-4">
+                            <input class="form-check-input" type="checkbox" id="termsAgree" required>
+                            <label class="form-check-label small text-muted" for="termsAgree">
+                                Я согласен с <a href="#" class="text-primary text-decoration-none">условиями использования</a> 
+                                и <a href="#" class="text-primary text-decoration-none">политикой конфиденциальности</a>
+                            </label>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary w-100 py-2 mb-3">
+                            Создать аккаунт
+                        </button>
+                        <div class="text-center">
+                            <p class="text-muted small mb-0">
+                                Уже есть аккаунт? 
+                                <a href="#" class="text-primary text-decoration-none fw-medium" 
+                                   data-bs-toggle="modal" data-bs-target="#loginModal" data-bs-dismiss="modal">
+                                    Войдите
+                                </a>
+                            </p>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS Bundle с Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Кастомный JavaScript -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            
+            // ===== СКРЫТИЕ/ПОКАЗ ХЕДЕРА ПРИ СКРОЛЛЕ =====
+            let lastScrollTop = 0;
+            const header = document.getElementById('header');
+            
+            window.addEventListener('scroll', function() {
+                let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+                
+                if (scrollTop > lastScrollTop && scrollTop > 100) {
+                    // Скролл вниз > 100px -> скрываем хедер
+                    header.style.transform = 'translateY(-100%)';
+                } else {
+                    // Скролл вверх -> показываем хедер
+                    header.style.transform = 'translateY(0)';
+                }
+                
+                lastScrollTop = scrollTop;
+            });
+            
+            // ===== ПЕРЕКЛЮЧЕНИЕ ВИДИМОСТИ ПАРОЛЯ =====
+            const togglePassword = document.getElementById('togglePassword');
+            if (togglePassword) {
+                togglePassword.addEventListener('click', function() {
+                    const passwordInput = document.getElementById('loginPassword');
+                    const type = passwordInput.getAttribute('type') === 'password' ? 'text' : 'password';
+                    passwordInput.setAttribute('type', type);
+                    this.querySelector('i').classList.toggle('bi-eye');
+                    this.querySelector('i').classList.toggle('bi-eye-slash');
+                });
+            }
+            
+            // ===== ВАЛИДАЦИЯ ФОРМЫ РЕГИСТРАЦИИ =====
+            const registerForm = document.getElementById('registerForm');
+            if (registerForm) {
+                registerForm.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    
+                    const password = document.getElementById('regPassword').value;
+                    const confirmPassword = document.getElementById('regPasswordConfirm').value;
+                    
+                    if (password !== confirmPassword) {
+                        alert('Пароли не совпадают!');
+                        return;
+                    }
+                    
+                    // Здесь обычно AJAX запрос на сервер
+                    alert('Регистрация прошла успешно (заглушка)!');
+                    
+                    // Закрываем модальное окно
+                    const modal = bootstrap.Modal.getInstance(document.getElementById('registerModal'));
+                    modal.hide();
+                    
+                    this.reset();
+                });
+            }
+            
+            // ===== ВАЛИДАЦИЯ ФОРМЫ ВХОДА =====
+            const loginForm = document.getElementById('loginForm');
+            if (loginForm) {
+                loginForm.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    
+                    // Здесь обычно AJAX запрос на сервер
+                    alert('Вход выполнен (заглушка)!');
+                    
+                    // Закрываем модальное окно
+                    const modal = bootstrap.Modal.getInstance(document.getElementById('loginModal'));
+                    modal.hide();
+                    
+                    this.reset();
+                });
+            }
+            
+            // ===== ПЛАВНЫЙ СКРОЛЛ ДЛЯ ЯКОРЕЙ =====
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    const href = this.getAttribute('href');
+                    if (href === '#' || href.startsWith('#!')) return;
+                    
+                    e.preventDefault();
+                    const targetElement = document.querySelector(href);
+                    
+                    if (targetElement) {
+                        window.scrollTo({
+                            top: targetElement.offsetTop - 80,
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+            
+            // ===== АКТИВНЫЙ ПУНКТ МЕНЮ ПРИ СКРОЛЛЕ (опционально) =====
+            const navLinks = document.querySelectorAll('.nav-link');
+            
+            function highlightNavLink() {
+                let fromTop = window.scrollY + 100;
+                
+                navLinks.forEach(link => {
+                    let section = document.querySelector(link.hash);
+                    
+                    if (section && 
+                        section.offsetTop <= fromTop && 
+                        section.offsetTop + section.offsetHeight > fromTop) {
+                        link.classList.add('active');
+                    } else {
+                        link.classList.remove('active');
+                    }
+                });
+            }
+            
+            window.addEventListener('scroll', highlightNavLink);
+        });
+    </script>
+</body>
+</html>

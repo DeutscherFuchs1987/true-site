@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Название Компании | Главная</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Подключение иконок (Font Awesome для примера) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Подключение шрифтов Google Fonts (Пример пары: Roboto + Open Sans) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Roboto:wght@700;900&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="https://via.placeholder.com/32/4A6FA5/FFFFFF?text=LOGO">
+</head>
+<body>
+    <!-- Шапка сайта (Header) -->
+    <header class="header" id="header">
+        <div class="container header__container">
+            <!-- Логотип -->
+            <a href="/" class="logo" aria-label="На главную страницу">
+                <!-- Вставьте свой логотип вместо текста или img -->
+                <!-- <img src="logo.png" alt="Логотип Название Компании" width="150" height="40"> -->
+                <span class="logo__text"><i class="fas fa-cube"></i> НазваниеКомпании</span>
+            </a>
+
+            <!-- Основная навигация для десктопа -->
+            <nav class="nav" aria-label="Основная навигация">
+                <ul class="nav__list">
+                    <li class="nav__item"><a href="#" class="nav__link">Услуги</a></li>
+                    <li class="nav__item"><a href="#" class="nav__link">О нас</a></li>
+                    <li class="nav__item"><a href="#" class="nav__link">Портфолио</a></li>
+                    <li class="nav__item"><a href="#" class="nav__link">Блог</a></li>
+                    <li class="nav__item"><a href="#" class="nav__link">Контакты</a></li>
+                </ul>
+            </nav>
+
+            <!-- Кнопки авторизации и бургер -->
+            <div class="header__actions">
+                <button class="btn btn--login" id="loginBtn" aria-label="Открыть окно входа">
+                    <i class="fas fa-sign-in-alt"></i> <span>Вход</span>
+                </button>
+                <button class="btn btn--primary btn--register" id="registerBtn">
+                    <i class="fas fa-user-plus"></i> <span>Регистрация</span>
+                </button>
+                <!-- Кнопка бургер-меню для мобильных -->
+                <button class="burger" id="burgerBtn" aria-label="Открыть меню" aria-expanded="false">
+                    <span class="burger__line"></span>
+                    <span class="burger__line"></span>
+                    <span class="burger__line"></span>
+                </button>
+            </div>
+        </div>
+
+        <!-- Мобильное меню (раскрывается по клику на бургер) -->
+        <div class="mobile-menu" id="mobileMenu">
+            <nav class="mobile-nav" aria-label="Мобильная навигация">
+                <ul class="mobile-nav__list">
+                    <li><a href="#" class="mobile-nav__link"><i class="fas fa-concierge-bell"></i> Услуги</a></li>
+                    <li><a href="#" class="mobile-nav__link"><i class="fas fa-info-circle"></i> О нас</a></li>
+                    <li><a href="#" class="mobile-nav__link"><i class="fas fa-briefcase"></i> Портфолио</a></li>
+                    <li><a href="#" class="mobile-nav__link"><i class="fas fa-blog"></i> Блог</a></li>
+                    <li><a href="#" class="mobile-nav__link"><i class="fas fa-address-book"></i> Контакты</a></li>
+                    <li class="mobile-nav__divider"></li>
+                    <li><a href="#" class="mobile-nav__link mobile-nav__link--login" id="mobileLoginBtn"><i class="fas fa-sign-in-alt"></i> Вход</a></li>
+                    <li><a href="#" class="mobile-nav__link mobile-nav__link--register" id="mobileRegisterBtn"><i class="fas fa-user-plus"></i> Регистрация</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Основное содержимое -->
+    <main>
+        <!-- Герой-секция (Hero Section) с поиском -->
+        <section class="hero" aria-label="Главный баннер">
+            <div class="container hero__container">
+                <div class="hero__content">
+                    <h1 class="hero__title">Заголовок, который привлекает внимание</h1>
+                    <p class="hero__subtitle">Краткое и убедительное описание вашего основного предложения, продукта или услуги. Почему именно вы?</p>
+                    <!-- Форма поиска -->
+                    <form class="search-form" role="search" aria-label="Поиск по сайту">
+                        <div class="search-form__group">
+                            <input type="search" class="search-form__input" placeholder="Что вы ищете?" aria-label="Поле поиска">
+                            <button type="submit" class="search-form__btn" aria-label="Найти">
+                                <i class="fas fa-search"></i> Найти
+                            </button>
+                        </div>
+                        <p class="search-form__hint">Например: веб-дизайн, консультация, документы</p>
+                    </form>
+                </div>
+                <div class="hero__image">
+                    <!-- Замените на свою иллюстрацию или оставьте фон в CSS -->
+                    <i class="fas fa-rocket hero__icon"></i>
+                </div>
+            </div>
+        </section>
+
+        <!-- Секция "Преимущества" (Пример контентной секции) -->
+        <section class="features" aria-label="Наши преимущества">
+            <div class="container">
+                <h2 class="section-title">Почему выбирают нас?</h2>
+                <p class="section-subtitle">Три ключевых преимущества, которые выделяют вас на фоне конкурентов.</p>
+                <div class="features__grid">
+                    <article class="feature-card">
+                        <div class="feature-card__icon">
+                            <i class="fas fa-bolt"></i>
+                        </div>
+                        <h3 class="feature-card__title">Быстро и эффективно</h3>
+                        <p class="feature-card__desc">Описание первого важного преимущества вашей компании или услуги.</p>
+                    </article>
+                    <article class="feature-card">
+                        <div class="feature-card__icon">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <h3 class="feature-card__title">Надежность</h3>
+                        <p class="feature-card__desc">Описание гарантии качества, безопасности или стабильности.</p>
+                    </article>
+                    <article class="feature-card">
+                        <div class="feature-card__icon">
+                            <i class="fas fa-headset"></i>
+                        </div>
+                        <h3 class="feature-card__title">Поддержка 24/7</h3>
+                        <p class="feature-card__desc">Всегда на связи, чтобы помочь с любыми вопросами и проблемами.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Дополнительная информационная секция -->
+        <section class="info" aria-label="Дополнительная информация">
+            <div class="container info__container">
+                <div class="info__content">
+                    <h2 class="section-title">Заголовок для призыва к действию или информации</h2>
+                    <p>Более подробный текст о вашей миссии, проекте или услуге. Можно использовать список.</p>
+                    <ul class="info__list">
+                        <li><i class="fas fa-check"></i> Пункт первый преимущества.</li>
+                        <li><i class="fas fa-check"></i> Пункт второй преимущества.</li>
+                        <li><i class="fas fa-check"></i> Пункт третий преимущества.</li>
+                    </ul>
+                    <a href="#" class="btn btn--primary btn--large">Узнать больше</a>
+                </div>
+                <div class="info__image">
+                    <!-- Placeholder для изображения -->
+                    <div class="info__image-placeholder"></div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Подвал сайта (Footer) -->
+    <footer class="footer">
+        <div class="container footer__container">
+            <div class="footer__brand">
+                <a href="/" class="logo footer__logo" aria-label="На главную страницу">
+                    <span class="logo__text"><i class="fas fa-cube"></i> НазваниеКомпании</span>
+                </a>
+                <p class="footer__tagline">Краткий слоган или описание миссии компании. © 2023</p>
+            </div>
+
+            <div class="footer__contacts">
+                <h3 class="footer__title">Контакты</h3>
+                <address class="footer__address">
+                    <p><i class="fas fa-map-marker-alt"></i> г. Москва, ул. Примерная, д. 1</p>
+                    <p><i class="fas fa-phone"></i> <a href="tel:+79999999999">+7 (999) 999-99-99</a></p>
+                    <p><i class="fas fa-envelope"></i> <a href="mailto:info@example.com">info@example.com</a></p>
+                </address>
+                <div class="footer__social">
+                    <a href="#" aria-label="ВКонтакте"><i class="fab fa-vk"></i></a>
+                    <a href="#" aria-label="Telegram"><i class="fab fa-telegram"></i></a>
+                    <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+
+            <div class="footer__quick-links">
+                <h3 class="footer__title">Быстрые ссылки</h3>
+                <ul class="footer__list">
+                    <li><a href="#">Услуги</a></li>
+                    <li><a href="#">О нас</a></li>
+                    <li><a href="#">Портфолио</a></li>
+                    <li><a href="#">Контакты</a></li>
+                    <li><a href="#">Политика конфиденциальности</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer__bottom">
+            <div class="container">
+                <p class="footer__copyright">&copy; 2023 НазваниеКомпании. Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Модальное окно ВХОДА -->
+    <div class="modal" id="loginModal" aria-hidden="true" role="dialog" aria-labelledby="loginModalTitle">
+        <div class="modal__overlay" id="modalOverlay"></div>
+        <div class="modal__content">
+            <button class="modal__close" id="closeLoginModal" aria-label="Закрыть окно">&times;</button>
+            <h2 id="loginModalTitle" class="modal__title"><i class="fas fa-sign-in-alt"></i> Вход в аккаунт</h2>
+            <form class="auth-form">
+                <div class="auth-form__group">
+                    <label for="loginEmail" class="auth-form__label">Электронная почта</label>
+                    <input type="email" id="loginEmail" class="auth-form__input" placeholder="example@mail.com" required>
+                </div>
+                <div class="auth-form__group">
+                    <label for="loginPassword" class="auth-form__label">Пароль</label>
+                    <input type="password" id="loginPassword" class="auth-form__input" placeholder="Ваш пароль" required>
+                </div>
+                <div class="auth-form__options">
+                    <label class="auth-form__checkbox">
+                        <input type="checkbox"> Запомнить меня
+                    </label>
+                    <a href="#" class="auth-form__link">Забыли пароль?</a>
+                </div>
+                <button type="submit" class="btn btn--primary btn--block">Войти</button>
+                <p class="auth-form__footer">Нет аккаунта? <a href="#" id="switchToRegister">Зарегистрируйтесь</a></p>
+            </form>
+        </div>
+    </div>
+
+    <!-- Модальное окно РЕГИСТРАЦИИ -->
+    <div class="modal" id="registerModal" aria-hidden="true" role="dialog" aria-labelledby="registerModalTitle">
+        <div class="modal__overlay" id="modalOverlayReg"></div>
+        <div class="modal__content">
+            <button class="modal__close" id="closeRegisterModal" aria-label="Закрыть окно">&times;</button>
+            <h2 id="registerModalTitle" class="modal__title"><i class="fas fa-user-plus"></i> Регистрация</h2>
+            <form class="auth-form">
+                <div class="auth-form__group">
+                    <label for="regName" class="auth-form__label">Имя</label>
+                    <input type="text" id="regName" class="auth-form__input" placeholder="Ваше имя" required>
+                </div>
+                <div class="auth-form__group">
+                    <label for="regEmail" class="auth-form__label">Электронная почта</label>
+                    <input type="email" id="regEmail" class="auth-form__input" placeholder="example@mail.com" required>
+                </div>
+                <div class="auth-form__group">
+                    <label for="regPassword" class="auth-form__label">Пароль</label>
+                    <input type="password" id="regPassword" class="auth-form__input" placeholder="Придумайте пароль" required>
+                </div>
+                <div class="auth-form__group">
+                    <label for="regPasswordConfirm" class="auth-form__label">Подтверждение пароля</label>
+                    <input type="password" id="regPasswordConfirm" class="auth-form__input" placeholder="Повторите пароль" required>
+                </div>
+                <label class="auth-form__checkbox">
+                    <input type="checkbox" required> Я согласен с <a href="#">условиями использования</a>
+                </label>
+                <button type="submit" class="btn btn--primary btn--block">Создать аккаунт</button>
+                <p class="auth-form__footer">Уже есть аккаунт? <a href="#" id="switchToLogin">Войдите</a></p>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
