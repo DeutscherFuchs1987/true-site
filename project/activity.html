@@ -1,0 +1,653 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IT-ЗОЖ | Активность вне компьютера</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Montserrat:wght@600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Шапка сайта -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <a href="index.html">
+                    <i class="fas fa-code"></i>
+                    <span class="logo-text">IT-ЗОЖ</span>
+                </a>
+            </div>
+            
+            <!-- Навигационное меню -->
+            <nav class="nav">
+                <ul class="nav-list">
+                    <li class="nav-item"><a href="index.html" class="nav-link"><i class="fas fa-home"></i> Главная</a></li>
+                    <li class="nav-item"><a href="warm-up.html" class="nav-link"><i class="fas fa-running"></i> Разминка</a></li>
+                    <li class="nav-item"><a href="activity.html" class="nav-link active"><i class="fas fa-bicycle"></i> Активность</a></li>
+                    <li class="nav-item"><a href="schedule.html" class="nav-link"><i class="fas fa-bed"></i> Режим и сон</a></li>
+                    <li class="nav-item"><a href="nutrition.html" class="nav-link"><i class="fas fa-apple-alt"></i> Питание</a></li>
+                    <li class="nav-item"><a href="prevention.html" class="nav-link"><i class="fas fa-shield-alt"></i> Профилактика</a></li>
+                </ul>
+                
+                <!-- Кнопка меню для мобильных устройств -->
+                <button class="menu-toggle" id="menuToggle">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Основной контент -->
+    <main>
+        <!-- Герой-секция для страницы активности -->
+        <section class="hero hero-small hero-activity">
+            <div class="container">
+                <div class="hero-content">
+                    <h1 class="hero-title">Активность вне компьютера</h1>
+                    <p class="hero-subtitle">Как компенсировать сидячий образ жизни и сохранить здоровье с помощью физической активности. Даже небольшие изменения в режиме дня могут дать значительный эффект.</p>
+                    <div class="hero-buttons">
+                        <a href="#recommendations" class="btn btn-outline">Смотреть рекомендации</a>
+                        <a href="#calculator" class="btn btn-primary">
+                            <i class="fas fa-calculator"></i> Калькулятор активности
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Секция с рекомендациями -->
+        <section class="section" id="recommendations">
+            <div class="container">
+                <h2 class="section-title">Рекомендации по физической активности</h2>
+                <p class="section-subtitle">Всемирная организация здравоохранения рекомендует не менее 150 минут умеренной активности в неделю. Вот как этого достичь.</p>
+                
+                <div class="activity-grid">
+                    <!-- Ходьба -->
+                    <div class="activity-card">
+                        
+                        <div class="activity-content">
+                            <div class="activity-header">
+                                <div class="activity-icon">
+                                    <i class="fas fa-walking"></i>
+                                </div>
+                                <h3 class="activity-title">Ходьба и кардио</h3>
+                                <span class="activity-level beginner">Начальный уровень</span>
+                            </div>
+                            <p class="activity-description">Самый доступный вид активности, не требующий специальной подготовки и оборудования.</p>
+                            
+                            <div class="activity-tips">
+                                <h4>Как включить в режим дня:</h4>
+                                <ul>
+                                    <li><strong>Ходите пешком на работу/учёбу</strong> или выходите на 1-2 остановки раньше</li>
+                                    <li><strong>Используйте лестницу вместо лифта</strong> - начинайте с 1-2 этажей</li>
+                                    <li><strong>Гуляйте во время обеденного перерыва</strong> - 15-20 минут быстрым шагом</li>
+                                    <li><strong>Вечерние прогулки</strong> - 30 минут перед сном улучшат качество сна</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="activity-benefits">
+                                <h4>Польза:</h4>
+                                <div class="benefits-list">
+                                    <span class="benefit-tag">Улучшение кровообращения</span>
+                                    <span class="benefit-tag">Снижение стресса</span>
+                                    <span class="benefit-tag">Профилактика заболеваний сердца</span>
+                                    <span class="benefit-tag">Сжигание калорий</span>
+                                </div>
+                            </div>
+                            
+                            <div class="activity-plan">
+                                <h4>План на неделю:</h4>
+                                <p>Ходить по 30 минут 5 дней в неделю = 150 минут активности</p>
+                                <div class="progress-week">
+                                    <div class="day active">Пн</div>
+                                    <div class="day">Вт</div>
+                                    <div class="day active">Ср</div>
+                                    <div class="day">Чт</div>
+                                    <div class="day active">Пт</div>
+                                    <div class="day">Сб</div>
+                                    <div class="day active">Вс</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Зарядка и тренировки -->
+                    <div class="activity-card">
+                        
+                        <div class="activity-content">
+                            <div class="activity-header">
+                                <div class="activity-icon">
+                                    <i class="fas fa-dumbbell"></i>
+                                </div>
+                                <h3 class="activity-title">Зарядка и домашние тренировки</h3>
+                                <span class="activity-level intermediate">Средний уровень</span>
+                            </div>
+                            <p class="activity-description">Короткие тренировки дома, не требующие специального оборудования.</p>
+                            
+                            <div class="activity-tips">
+                                <h4>Базовые упражнения:</h4>
+                                <div class="exercises-list">
+                                    <div class="mini-exercise">
+                                        <h5>Приседания (3 подхода по 15 раз)</h5>
+                                        <p>Укрепляют ноги и ягодицы, улучшают осанку</p>
+                                    </div>
+                                    <div class="mini-exercise">
+                                        <h5>Отжимания (3 подхода по 10-15 раз)</h5>
+                                        <p>Укрепляют грудь, плечи и трицепсы</p>
+                                    </div>
+                                    <div class="mini-exercise">
+                                        <h5>Планка (3 подхода по 30-60 секунд)</h5>
+                                        <p>Укрепляет мышцы кора, улучшает осанку</p>
+                                    </div>
+                                    <div class="mini-exercise">
+                                        <h5>Выпады (3 подхода по 10 раз на каждую ногу)</h5>
+                                        <p>Укрепляют ноги и ягодицы, улучшают баланс</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="activity-benefits">
+                                <h4>Польза:</h4>
+                                <div class="benefits-list">
+                                    <span class="benefit-tag">Укрепление мышц</span>
+                                    <span class="benefit-tag">Улучшение осанки</span>
+                                    <span class="benefit-tag">Ускорение метаболизма</span>
+                                    <span class="benefit-tag">Повышение энергии</span>
+                                </div>
+                            </div>
+                            
+                            <div class="activity-plan">
+                                <h4>План на неделю:</h4>
+                                <p>Тренировки по 20-30 минут 3 раза в неделю</p>
+                                <div class="schedule">
+                                    <div class="schedule-item">
+                                        <span class="day">Понедельник</span>
+                                        <span class="time">Утро: 20 мин зарядка</span>
+                                    </div>
+                                    <div class="schedule-item">
+                                        <span class="day">Среда</span>
+                                        <span class="time">Вечер: 30 мин силовая</span>
+                                    </div>
+                                    <div class="schedule-item">
+                                        <span class="day">Пятница</span>
+                                        <span class="time">Утро: 20 мин зарядка</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Спорт-секции -->
+                    <div class="activity-card">
+                        
+                        <div class="activity-content">
+                            <div class="activity-header">
+                                <div class="activity-icon">
+                                    <i class="fas fa-basketball-ball"></i>
+                                </div>
+                                <h3 class="activity-title">Спорт-секции и спортзал</h3>
+                                <span class="activity-level advanced">Продвинутый уровень</span>
+                            </div>
+                            <p class="activity-description">Регулярные занятия в спортзале или спортивной секции для комплексного развития.</p>
+                            
+                            <div class="activity-tips">
+                                <h4>Популярные варианты для программистов:</h4>
+                                <div class="sports-options">
+                                    <div class="sport-option">
+                                        <div class="sport-icon">
+                                            <i class="fas fa-swimming-pool"></i>
+                                        </div>
+                                        <div class="sport-info">
+                                            <h5>Плавание</h5>
+                                            <p>Разгружает позвоночник, развивает все группы мышц</p>
+                                        </div>
+                                    </div>
+                                    <div class="sport-option">
+                                        <div class="sport-icon">
+                                            <i class="fas fa-yin-yang"></i>
+                                        </div>
+                                        <div class="sport-info">
+                                            <h5>Йога/Пилатес</h5>
+                                            <p>Улучшает гибкость, осанку и снимает стресс</p>
+                                        </div>
+                                    </div>
+                                    <div class="sport-option">
+                                        <div class="sport-icon">
+                                            <i class="fas fa-running"></i>
+                                        </div>
+                                        <div class="sport-info">
+                                            <h5>Бег/Велоспорт</h5>
+                                            <p>Улучшает сердечно-сосудистую систему</p>
+                                        </div>
+                                    </div>
+                                    <div class="sport-option">
+                                        <div class="sport-icon">
+                                            <i class="fas fa-futbol"></i>
+                                        </div>
+                                        <div class="sport-info">
+                                            <h5>Командные виды спорта</h5>
+                                            <p>Социальное взаимодействие + физическая активность</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="activity-benefits">
+                                <h4>Польза:</h4>
+                                <div class="benefits-list">
+                                    <span class="benefit-tag">Комплексное развитие</span>
+                                    <span class="benefit-tag">Социализация</span>
+                                    <span class="benefit-tag">Дисциплина</span>
+                                    <span class="benefit-tag">Мотивация</span>
+                                </div>
+                            </div>
+                            
+                            <div class="activity-plan">
+                                <h4>Как начать:</h4>
+                                <ol class="start-list">
+                                    <li>Выберите активность, которая вам интересна</li>
+                                    <li>Начните с 1-2 раз в неделю</li>
+                                    <li>Найдите партнера для тренировок</li>
+                                    <li>Постепенно увеличивайте нагрузку</li>
+                                    <li>Слушайте свое тело - не перегружайтесь</li>
+                                </ol>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Секция с калькулятором активности -->
+        <section class="section section-gray" id="calculator">
+            <div class="container">
+                <h2 class="section-title">Калькулятор активности</h2>
+                <p class="section-subtitle">Узнайте, сколько калорий вы сжигаете при разных видах активности и соответствует ли ваша активность рекомендациям ВОЗ.</p>
+                
+                <div class="calculator-container">
+                    <div class="calculator-form">
+                        <div class="form-group">
+                            <label for="weight">Ваш вес (кг):</label>
+                            <input type="number" id="weight" min="30" max="200" value="70" class="form-input">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="activity">Вид активности:</label>
+                            <select id="activity" class="form-select">
+                                <option value="4">Ходьба (4 км/ч)</option>
+                                <option value="5">Быстрая ходьба (6 км/ч)</option>
+                                <option value="7">Бег (8 км/ч)</option>
+                                <option value="10">Бег (12 км/ч)</option>
+                                <option value="3.5">Велосипед (10 км/ч)</option>
+                                <option value="7">Велосипед (20 км/ч)</option>
+                                <option value="5">Плавание (медленно)</option>
+                                <option value="8">Плавание (быстро)</option>
+                                <option value="4">Йога</option>
+                                <option value="6">Силовая тренировка</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="duration">Продолжительность (минуты):</label>
+                            <input type="number" id="duration" min="5" max="300" value="30" class="form-input">
+                        </div>
+                        
+                        <button id="calculateBtn" class="btn btn-primary">
+                            <i class="fas fa-calculator"></i> Рассчитать
+                        </button>
+                    </div>
+                    
+                    <div class="calculator-results">
+                        <div class="result-card">
+                            <div class="result-icon">
+                                <i class="fas fa-fire"></i>
+                            </div>
+                            <h3 id="caloriesResult">0 ккал</h3>
+                            <p>Сожжено калорий</p>
+                        </div>
+                        
+                        <div class="result-card">
+                            <div class="result-icon">
+                                <i class="fas fa-heartbeat"></i>
+                            </div>
+                            <h3 id="activityMinutes">0 минут</h3>
+                            <p>Активности в неделю</p>
+                        </div>
+                        
+                        <div class="result-card">
+                            <div class="result-icon">
+                                <i class="fas fa-bullseye"></i>
+                            </div>
+                            <h3 id="whoGoal">0%</h3>
+                            <p>От нормы ВОЗ</p>
+                        </div>
+                        
+                        <div class="progress-goal">
+                            <h4>Прогресс к цели ВОЗ (150 мин/неделю):</h4>
+                            <div class="progress-bar-large">
+                                <div class="progress-fill" id="progressFill"></div>
+                            </div>
+                            <div class="progress-text">
+                                <span id="currentMinutes">0</span> из 150 минут
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="calculator-tips">
+                    <h3>Советы по увеличению активности:</h3>
+                    <div class="tips-list">
+                        <div class="tip">
+                            <i class="fas fa-bell"></i>
+                            <p>Установите напоминания о перерывах каждые 60 минут</p>
+                        </div>
+                        <div class="tip">
+                            <i class="fas fa-chart-line"></i>
+                            <p>Ведите дневник активности для отслеживания прогресса</p>
+                        </div>
+                        <div class="tip">
+                            <i class="fas fa-users"></i>
+                            <p>Найдите партнера для совместных тренировок</p>
+                        </div>
+                        <div class="tip">
+                            <i class="fas fa-trophy"></i>
+                            <p>Ставьте достижимые цели и вознаграждайте себя</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Секция с мотивацией -->
+        <section class="section motivation-section">
+            <div class="container">
+                <h2 class="section-title">Преодолейте барьеры к активности</h2>
+                
+                <div class="motivation-grid">
+                    <div class="motivation-card">
+                        <div class="motivation-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <h3>"У меня нет времени"</h3>
+                        <p><strong>Решение:</strong> Начните с 10-минутных тренировок. Используйте время ожидания или короткие перерывы. Помните: 10 минут лучше, чем 0.</p>
+                    </div>
+                    
+                    <div class="motivation-card">
+                        <div class="motivation-icon">
+                            <i class="fas fa-tired"></i>
+                        </div>
+                        <h3>"Я слишком устаю после работы"</h3>
+                        <p><strong>Решение:</strong> Физическая активность на самом деле повышает энергию. Начните с легких вечерних прогулок или утренней зарядки.</p>
+                    </div>
+                    
+                    <div class="motivation-card">
+                        <div class="motivation-icon">
+                            <i class="fas fa-money-bill-wave"></i>
+                        </div>
+                        <h3>"Спорт - это дорого"</h3>
+                        <p><strong>Решение:</strong> Ходьба, бег, домашние тренировки бесплатны. Можно заниматься по видеоурокам на YouTube.</p>
+                    </div>
+                    
+                    <div class="motivation-card">
+                        <div class="motivation-icon">
+                            <i class="fas fa-user-friends"></i>
+                        </div>
+                        <h3>"Мне скучно заниматься одному"</h3>
+                        <p><strong>Решение:</strong> Найдите партнера для тренировок, вступите в беговой клуб или слушайте аудиокниги/подкасты во время активности.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Секция с призывом к действию -->
+        <section class="section cta-section">
+            <div class="container">
+                <h2 class="cta-title">Начните с малого, но начните сегодня!</h2>
+                <p class="cta-text">Первый шаг - самый сложный. Начните с 10-минутной прогулки сегодня и постепенно увеличивайте активность.</p>
+                <div class="cta-buttons">
+                    <button id="setReminder" class="btn btn-primary btn-large">
+                        <i class="fas fa-bell"></i> Установить напоминание
+                    </button>
+                    <a href="warm-up.html" class="btn btn-outline btn-large">
+                        Сначала разминка
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Подвал сайта -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <i class="fas fa-code"></i>
+                    <span class="logo-text">IT-ЗОЖ</span>
+                </div>
+                <p class="footer-description">Учебный проект о здоровом образе жизни для программистов. Советы и рекомендации, которые помогут сохранить здоровье в условиях сидячей работы.</p>
+                
+                <div class="footer-links">
+                    <h4 class="footer-title">Быстрые ссылки</h4>
+                    <ul class="footer-list">
+                        <li><a href="index.html">Главная</a></li>
+                        <li><a href="warm-up.html">Разминка</a></li>
+                        <li><a href="activity.html">Активность</a></li>
+                        <li><a href="schedule.html">Режим и сон</a></li>
+                        <li><a href="nutrition.html">Питание</a></li>
+                        <li><a href="prevention.html">Профилактика</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-info">
+                    <h4 class="footer-title">Информация</h4>
+                    <p>© <span id="currentYear"></span> IT-ЗОЖ. Учебный проект.</p>
+                    <p>Для начинающих веб-разработчиков.</p>
+                    
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>Сайт создан в образовательных целях. Консультация специалиста рекомендуется при серьезных проблемах со здоровьем.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Скрипты -->
+    <script>
+        // Текущий год в футере
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+        
+        // Мобильное меню
+        document.getElementById('menuToggle').addEventListener('click', function() {
+            document.querySelector('.nav-list').classList.toggle('show');
+        });
+        
+        // Калькулятор активности
+        const calculateBtn = document.getElementById('calculateBtn');
+        const caloriesResult = document.getElementById('caloriesResult');
+        const activityMinutes = document.getElementById('activityMinutes');
+        const whoGoal = document.getElementById('whoGoal');
+        const progressFill = document.getElementById('progressFill');
+        const currentMinutes = document.getElementById('currentMinutes');
+        
+        // Данные для расчета (MET значения для разных активностей)
+        const metValues = {
+            3.5: { name: "Велосипед (10 км/ч)", met: 3.5 },
+            4: { name: "Ходьба (4 км/ч)", met: 4 },
+            5: { name: "Быстрая ходьба (6 км/ч)", met: 5 },
+            7: { name: "Бег (8 км/ч)", met: 7 },
+            10: { name: "Бег (12 км/ч)", met: 10 },
+            3.5: { name: "Велосипед (10 км/ч)", met: 3.5 },
+            7: { name: "Велосипед (20 км/ч)", met: 7 },
+            5: { name: "Плавание (медленно)", met: 5 },
+            8: { name: "Плавание (быстро)", met: 8 },
+            4: { name: "Йога", met: 4 },
+            6: { name: "Силовая тренировка", met: 6 }
+        };
+        
+        // Хранение активности за неделю (в локальном хранилище)
+        let weeklyActivity = JSON.parse(localStorage.getItem('weeklyActivity')) || {
+            monday: 0,
+            tuesday: 0,
+            wednesday: 0,
+            thursday: 0,
+            friday: 0,
+            saturday: 0,
+            sunday: 0
+        };
+        
+        // Функция расчета калорий
+        function calculateCalories() {
+            const weight = parseFloat(document.getElementById('weight').value);
+            const activityValue = parseFloat(document.getElementById('activity').value);
+            const duration = parseFloat(document.getElementById('duration').value);
+            
+            if (!weight || !activityValue || !duration) {
+                alert('Пожалуйста, заполните все поля');
+                return;
+            }
+            
+            // Формула: калории = MET × вес (кг) × время (часы)
+            const hours = duration / 60;
+            const caloriesBurned = activityValue * weight * hours;
+            
+            // Обновление результатов
+            caloriesResult.textContent = `${Math.round(caloriesBurned)} ккал`;
+            
+            // Обновление минут активности за неделю
+            const totalWeeklyMinutes = Object.values(weeklyActivity).reduce((a, b) => a + b, 0);
+            activityMinutes.textContent = `${totalWeeklyMinutes} минут`;
+            currentMinutes.textContent = totalWeeklyMinutes;
+            
+            // Расчет процента от нормы ВОЗ
+            const whoPercentage = Math.min(100, Math.round((totalWeeklyMinutes / 150) * 100));
+            whoGoal.textContent = `${whoPercentage}%`;
+            
+            // Обновление прогресс-бара
+            progressFill.style.width = `${whoPercentage}%`;
+            
+            // Добавление сегодняшней активности
+            const today = new Date().getDay(); // 0 - воскресенье, 1 - понедельник...
+            const days = ['sunday', 'monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday'];
+            const todayKey = days[today];
+            
+            weeklyActivity[todayKey] += duration;
+            localStorage.setItem('weeklyActivity', JSON.stringify(weeklyActivity));
+            
+            // Показать уведомление
+            showNotification(`Добавлено ${duration} минут активности! Всего за неделю: ${totalWeeklyMinutes + duration} минут.`);
+        }
+        
+        // Функция показа уведомления
+        function showNotification(message) {
+            // Создаем элемент уведомления
+            const notification = document.createElement('div');
+            notification.className = 'notification';
+            notification.innerHTML = `
+                <i class="fas fa-check-circle"></i>
+                <span>${message}</span>
+            `;
+            
+            // Стили для уведомления
+            notification.style.cssText = `
+                position: fixed;
+                top: 20px;
+                right: 20px;
+                background: #2ecc71;
+                color: white;
+                padding: 15px 20px;
+                border-radius: 8px;
+                box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+                display: flex;
+                align-items: center;
+                gap: 10px;
+                z-index: 10000;
+                animation: slideIn 0.3s ease;
+            `;
+            
+            // Добавляем стили для анимации
+            const style = document.createElement('style');
+            style.textContent = `
+                @keyframes slideIn {
+                    from { transform: translateX(100%); opacity: 0; }
+                    to { transform: translateX(0); opacity: 1; }
+                }
+                @keyframes slideOut {
+                    from { transform: translateX(0); opacity: 1; }
+                    to { transform: translateX(100%); opacity: 0; }
+                }
+            `;
+            document.head.appendChild(style);
+            
+            document.body.appendChild(notification);
+            
+            // Удаляем уведомление через 5 секунд
+            setTimeout(() => {
+                notification.style.animation = 'slideOut 0.3s ease';
+                setTimeout(() => {
+                    document.body.removeChild(notification);
+                }, 300);
+            }, 5000);
+        }
+        
+        // Функция установки напоминания
+        function setReminder() {
+            if ('Notification' in window && Notification.permission === 'granted') {
+                new Notification('IT-ЗОЖ напоминает', {
+                    body: 'Пора сделать перерыв и немного подвигаться! 5-10 минут активности улучшат вашу продуктивность.',
+                    icon: 'https://cdn-icons-png.flaticon.com/512/3067/3067256.png'
+                });
+            } else if ('Notification' in window && Notification.permission !== 'denied') {
+                Notification.requestPermission().then(permission => {
+                    if (permission === 'granted') {
+                        setReminder();
+                    }
+                });
+            } else {
+                alert('Разрешите уведомления в настройках браузера для напоминаний об активности');
+            }
+        }
+        
+        // Инициализация калькулятора при загрузке
+        function initCalculator() {
+            const totalWeeklyMinutes = Object.values(weeklyActivity).reduce((a, b) => a + b, 0);
+            activityMinutes.textContent = `${totalWeeklyMinutes} минут`;
+            currentMinutes.textContent = totalWeeklyMinutes;
+            
+            const whoPercentage = Math.min(100, Math.round((totalWeeklyMinutes / 150) * 100));
+            whoGoal.textContent = `${whoPercentage}%`;
+            progressFill.style.width = `${whoPercentage}%`;
+        }
+        
+        // Назначение обработчиков событий
+        calculateBtn.addEventListener('click', calculateCalories);
+        document.getElementById('setReminder').addEventListener('click', setReminder);
+        
+        // Плавная прокрутка к якорям
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                if (this.getAttribute('href') !== '#') {
+                    e.preventDefault();
+                    const targetId = this.getAttribute('href');
+                    if (targetId === '#') return;
+                    
+                    const targetElement = document.querySelector(targetId);
+                    if (targetElement) {
+                        window.scrollTo({
+                            top: targetElement.offsetTop - 80,
+                            behavior: 'smooth'
+                        });
+                        
+                        // Закрыть мобильное меню после клика
+                        document.querySelector('.nav-list').classList.remove('show');
+                    }
+                }
+            });
+        });
+        
+        // Инициализация при загрузке страницы
+        document.addEventListener('DOMContentLoaded', initCalculator);
+    </script>
+</body>
+</html>

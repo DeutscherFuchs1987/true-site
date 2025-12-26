@@ -1,0 +1,606 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IT-ЗОЖ | Разминка за компьютером</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Montserrat:wght@600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Шапка сайта -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <a href="index.html">
+                    <i class="fas fa-code"></i>
+                    <span class="logo-text">IT-ЗОЖ</span>
+                </a>
+            </div>
+            
+            <!-- Навигационное меню -->
+            <nav class="nav">
+                <ul class="nav-list">
+                    <li class="nav-item"><a href="index.html" class="nav-link"><i class="fas fa-home"></i> Главная</a></li>
+                    <li class="nav-item"><a href="warm-up.html" class="nav-link active"><i class="fas fa-running"></i> Разминка</a></li>
+                    <li class="nav-item"><a href="activity.html" class="nav-link"><i class="fas fa-bicycle"></i> Активность</a></li>
+                    <li class="nav-item"><a href="schedule.html" class="nav-link"><i class="fas fa-bed"></i> Режим и сон</a></li>
+                    <li class="nav-item"><a href="nutrition.html" class="nav-link"><i class="fas fa-apple-alt"></i> Питание</a></li>
+                    <li class="nav-item"><a href="prevention.html" class="nav-link"><i class="fas fa-shield-alt"></i> Профилактика</a></li>
+                </ul>
+                
+                <!-- Кнопка меню для мобильных устройств -->
+                <button class="menu-toggle" id="menuToggle">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Основной контент -->
+    <main>
+        <!-- Герой-секция для страницы разминки -->
+        <section class="hero hero-small">
+            <div class="container">
+                <div class="hero-content">
+                    <h1 class="hero-title">Разминка за компьютером</h1>
+                    <p class="hero-subtitle">5-10 простых упражнений, которые можно выполнять, не отходя от рабочего места. Делайте перерывы каждые 45-60 минут работы.</p>
+                    <div class="hero-buttons">
+                        <a href="#exercises" class="btn btn-outline">Смотреть упражнения</a>
+                        <button id="startWorkout" class="btn btn-primary">
+                            <i class="fas fa-play"></i> Начать тренировку
+                        </button>
+                    </div>
+                </div>
+                
+            </div>
+        </section>
+
+        <!-- Таймер для тренировки -->
+        <section class="section timer-section" id="timerSection" style="display: none;">
+            <div class="container">
+                <div class="timer-container">
+                    <h3>Таймер для упражнения</h3>
+                    <div class="timer-display">
+                        <span id="minutes">01</span>:<span id="seconds">00</span>
+                    </div>
+                    <p id="currentExercise">Готовьтесь к первому упражнению</p>
+                    <div class="timer-controls">
+                        <button id="startTimer" class="btn btn-primary">
+                            <i class="fas fa-play"></i> Старт
+                        </button>
+                        <button id="pauseTimer" class="btn btn-outline" disabled>
+                            <i class="fas fa-pause"></i> Пауза
+                        </button>
+                        <button id="resetTimer" class="btn btn-outline">
+                            <i class="fas fa-redo"></i> Сброс
+                        </button>
+                        <button id="nextExercise" class="btn btn-primary">
+                            <i class="fas fa-forward"></i> Следующее
+                        </button>
+                    </div>
+                    <div class="progress-container">
+                        <div class="progress-bar" id="progressBar"></div>
+                    </div>
+                    <p class="timer-tip">Упражнение: <span id="exerciseName">Разминка для шеи</span></p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Секция с упражнениями -->
+        <section class="section" id="exercises">
+            <div class="container">
+                <h2 class="section-title">Упражнения для работы за компьютером</h2>
+                <p class="section-subtitle">Выполняйте каждое упражнение по 30-60 секунд. Повторяйте комплекс каждые 2-3 часа работы.</p>
+                
+                <!-- Фильтр упражнений -->
+                <div class="exercise-filter">
+                    <button class="filter-btn active" data-filter="all">Все</button>
+                    <button class="filter-btn" data-filter="neck">Шея</button>
+                    <button class="filter-btn" data-filter="back">Спина</button>
+                    <button class="filter-btn" data-filter="hands">Кисти</button>
+                    <button class="filter-btn" data-filter="eyes">Глаза</button>
+                    <button class="filter-btn" data-filter="shoulders">Плечи</button>
+                </div>
+                
+                <div class="exercises-grid">
+                    <!-- Упражнение 1: Шея -->
+                    <div class="exercise-card" data-category="neck">
+                        <div class="exercise-header">
+                            <div class="exercise-icon">
+                                <i class="fas fa-user"></i>
+                            </div>
+                            <h3 class="exercise-title">Наклоны головы</h3>
+                            <span class="exercise-time"><i class="far fa-clock"></i> 1 мин</span>
+                        </div>
+                        
+                        <div class="exercise-content">
+                            <h4>Как выполнять:</h4>
+                            <ol class="exercise-steps">
+                                <li>Сядьте прямо, спина ровная</li>
+                                <li>Медленно наклоните голову к правому плечу, задержитесь на 5 секунд</li>
+                                <li>Вернитесь в исходное положение</li>
+                                <li>Повторите к левому плечу</li>
+                                <li>Сделайте по 5 наклонов в каждую сторону</li>
+                            </ol>
+                            <div class="exercise-benefits">
+                                <h4>Польза:</h4>
+                                <p>Снимает напряжение в шейном отделе, улучшает кровообращение, профилактика остеохондроза.</p>
+                            </div>
+                            <button class="btn btn-outline btn-small start-exercise" data-exercise="Наклоны головы">
+                                <i class="fas fa-play"></i> Начать это упражнение
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <!-- Упражнение 2: Спина -->
+                    <div class="exercise-card" data-category="back">
+                        <div class="exercise-header">
+                            <div class="exercise-icon">
+                                <i class="fas fa-spine"></i>
+                            </div>
+                            <h3 class="exercise-title">Прогибы спины</h3>
+                            <span class="exercise-time"><i class="far fa-clock"></i> 1 мин</span>
+                        </div>
+                        
+                        <div class="exercise-content">
+                            <h4>Как выполнять:</h4>
+                            <ol class="exercise-steps">
+                                <li>Сядьте на край стула</li>
+                                <li>Руки положите на колени или подлокотники</li>
+                                <li>Медленно прогнитесь в спине назад, раскрывая грудную клетку</li>
+                                <li>Задержитесь в этом положении на 5-10 секунд</li>
+                                <li>Вернитесь в исходное положение</li>
+                                <li>Повторите 8-10 раз</li>
+                            </ol>
+                            <div class="exercise-benefits">
+                                <h4>Польза:</h4>
+                                <p>Укрепляет мышцы спины, снимает нагрузку с поясницы, улучшает осанку.</p>
+                            </div>
+                            <button class="btn btn-outline btn-small start-exercise" data-exercise="Прогибы спины">
+                                <i class="fas fa-play"></i> Начать это упражнение
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <!-- Упражнение 3: Кисти -->
+                    <div class="exercise-card" data-category="hands">
+                        <div class="exercise-header">
+                            <div class="exercise-icon">
+                                <i class="fas fa-hand-paper"></i>
+                            </div>
+                            <h3 class="exercise-title">Разминка для кистей</h3>
+                            <span class="exercise-time"><i class="far fa-clock"></i> 2 мин</span>
+                        </div>
+                        
+                        <div class="exercise-content">
+                            <h4>Как выполнять:</h4>
+                            <ol class="exercise-steps">
+                                <li>Вытяните руки перед собой</li>
+                                <li>С силой сожмите кулаки на 5 секунд</li>
+                                <li>Разожмите и максимально растопырьте пальцы на 5 секунд</li>
+                                <li>Сделайте вращательные движения кистями по 10 раз в каждую сторону</li>
+                                <li>Потрясите расслабленными кистями 10 секунд</li>
+                            </ol>
+                            <div class="exercise-benefits">
+                                <h4>Польза:</h4>
+                                <p>Профилактика туннельного синдрома запястья, улучшение кровообращения, снятие усталости с кистей.</p>
+                            </div>
+                            <button class="btn btn-outline btn-small start-exercise" data-exercise="Разминка для кистей">
+                                <i class="fas fa-play"></i> Начать это упражнение
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <!-- Упражнение 4: Глаза -->
+                    <div class="exercise-card" data-category="eyes">
+                        <div class="exercise-header">
+                            <div class="exercise-icon">
+                                <i class="fas fa-eye"></i>
+                            </div>
+                            <h3 class="exercise-title">Гимнастика для глаз</h3>
+                            <span class="exercise-time"><i class="far fa-clock"></i> 2 мин</span>
+                        </div>
+                        
+                        <div class="exercise-content">
+                            <h4>Как выполнять:</h4>
+                            <ol class="exercise-steps">
+                                <li>Закройте глаза на 5 секунд, затем откройте (повторите 5 раз)</li>
+                                <li>Посмотрите вдаль на 5 секунд, затем на кончик носа на 5 секунд (5 раз)</li>
+                                <li>Медленно вращайте глазами по часовой стрелке, затем против (по 5 раз)</li>
+                                <li>Быстро поморгайте 30 секунд</li>
+                                <li>Легко помассируйте веки круговыми движениями</li>
+                            </ol>
+                            <div class="exercise-benefits">
+                                <h4>Польза:</h4>
+                                <p>Снимает усталость глаз, профилактика синдрома сухого глаза, улучшение кровообращения.</p>
+                            </div>
+                            <button class="btn btn-outline btn-small start-exercise" data-exercise="Гимнастика для глаз">
+                                <i class="fas fa-play"></i> Начать это упражнение
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <!-- Упражнение 5: Плечи -->
+                    <div class="exercise-card" data-category="shoulders">
+                        <div class="exercise-header">
+                            <div class="exercise-icon">
+                                <i class="fas fa-arrows-alt-h"></i>
+                            </div>
+                            <h3 class="exercise-title">Вращение плечами</h3>
+                            <span class="exercise-time"><i class="far fa-clock"></i> 1 мин</span>
+                        </div>
+                        
+                        <div class="exercise-content">
+                            <h4>Как выполнять:</h4>
+                            <ol class="exercise-steps">
+                                <li>Сядьте прямо, руки вдоль тела</li>
+                                <li>Поднимите плечи к ушам, задержитесь на 3 секунды</li>
+                                <li>Отведите плечи назад, сведя лопатки</li>
+                                <li>Опустите плечи вниз</li>
+                                <li>Сделайте 10 вращений плечами вперед и 10 назад</li>
+                            </ol>
+                            <div class="exercise-benefits">
+                                <h4>Польза:</h4>
+                                <p>Снимает напряжение в плечевом поясе, улучшает подвижность суставов, профилактика болей в плечах.</p>
+                            </div>
+                            <button class="btn btn-outline btn-small start-exercise" data-exercise="Вращение плечами">
+                                <i class="fas fa-play"></i> Начать это упражнение
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <!-- Упражнение 6: Комплексное -->
+                    <div class="exercise-card" data-category="back neck">
+                        <div class="exercise-header">
+                            <div class="exercise-icon">
+                                <i class="fas fa-user-md"></i>
+                            </div>
+                            <h3 class="exercise-title">Скручивание сидя</h3>
+                            <span class="exercise-time"><i class="far fa-clock"></i> 2 мин</span>
+                        </div>
+                        <div class="exercise-content">
+                            <h4>Как выполнять:</h4>
+                            <ol class="exercise-steps">
+                                <li>Сядьте прямо, ноги на ширине плеч</li>
+                                <li>Разверните корпус вправо, положив левую руку на правое колено</li>
+                                <li>Правую руку заведите за спинку стула для усиления скручивания</li>
+                                <li>Задержитесь на 15-20 секунд</li>
+                                <li>Повторите в другую сторону</li>
+                                <li>Сделайте по 3 скручивания в каждую сторону</li>
+                            </ol>
+                            <div class="exercise-benefits">
+                                <h4>Польза:</h4>
+                                <p>Улучшает подвижность позвоночника, снимает напряжение в спине и шее, стимулирует работу внутренних органов.</p>
+                            </div>
+                            <button class="btn btn-outline btn-small start-exercise" data-exercise="Скручивание сидя">
+                                <i class="fas fa-play"></i> Начать это упражнение
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Секция с советами -->
+        <section class="section section-gray">
+            <div class="container">
+                <h2 class="section-title">Как правильно делать перерывы</h2>
+                <div class="tips-grid">
+                    <div class="tip-card">
+                        <div class="tip-icon">
+                            <i class="fas fa-hourglass-start"></i>
+                        </div>
+                        <h3>Метод Помодоро</h3>
+                        <p>Работайте 25 минут, затем делайте 5-минутный перерыв. После 4 циклов — длинный перерыв 15-30 минут.</p>
+                    </div>
+                    
+                    <div class="tip-card">
+                        <div class="tip-icon">
+                            <i class="fas fa-water"></i>
+                        </div>
+                        <h3>Пейте воду</h3>
+                        <p>Во время перерыва выпивайте стакан воды. Это не только полезно для организма, но и заставляет вас вставать.</p>
+                    </div>
+                    
+                    <div class="tip-card">
+                        <div class="tip-icon">
+                            <i class="fas fa-walking"></i>
+                        </div>
+                        <h3>Прогуляйтесь</h3>
+                        <p>Во время длинного перерыва встаньте и пройдитесь. Даже 5 минут ходьбы улучшат кровообращение.</p>
+                    </div>
+                    
+                    <div class="tip-card">
+                        <div class="tip-icon">
+                            <i class="fas fa-window-restore"></i>
+                        </div>
+                        <h3>Смените фокус</h3>
+                        <p>Во время перерыва смотрите в окно на distant объекты (правило 20-20-20). Это даст отдых глазам.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Призыв к действию -->
+        <section class="section cta-section">
+            <div class="container">
+                <h2 class="cta-title">Запланируйте перерывы в своем дне!</h2>
+                <p class="cta-text">Используйте таймер или приложения для напоминания о перерывах. Ваше здоровье — ваш главный ресурс.</p>
+                <div class="cta-buttons">
+                    <button id="startFullWorkout" class="btn btn-primary btn-large">
+                        <i class="fas fa-dumbbell"></i> Начать полную разминку
+                    </button>
+                    <a href="schedule.html" class="btn btn-outline btn-large">
+                        Узнать о режиме дня
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Подвал сайта -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <i class="fas fa-code"></i>
+                    <span class="logo-text">IT-ЗОЖ</span>
+                </div>
+                <p class="footer-description">Учебный проект о здоровом образе жизни для программистов. Советы и рекомендации, которые помогут сохранить здоровье в условиях сидячей работы.</p>
+                
+                <div class="footer-links">
+                    <h4 class="footer-title">Быстрые ссылки</h4>
+                    <ul class="footer-list">
+                        <li><a href="index.html">Главная</a></li>
+                        <li><a href="warm-up.html">Разминка</a></li>
+                        <li><a href="activity.html">Активность</a></li>
+                        <li><a href="schedule.html">Режим и сон</a></li>
+                        <li><a href="nutrition.html">Питание</a></li>
+                        <li><a href="prevention.html">Профилактика</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-info">
+                    <h4 class="footer-title">Информация</h4>
+                    <p>© <span id="currentYear"></span> IT-ЗОЖ. Учебный проект.</p>
+                    <p>Для начинающих веб-разработчиков.</p>
+                    
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>Сайт создан в образовательных целях. Консультация специалиста рекомендуется при серьезных проблемах со здоровьем.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Скрипты -->
+    <script>
+        // Текущий год в футере
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+        
+        // Мобильное меню
+        document.getElementById('menuToggle').addEventListener('click', function() {
+            document.querySelector('.nav-list').classList.toggle('show');
+        });
+        
+        // Данные для тренировки
+        const exercises = [
+            { name: "Наклоны головы", time: 60, category: "neck" },
+            { name: "Прогибы спины", time: 60, category: "back" },
+            { name: "Разминка для кистей", time: 120, category: "hands" },
+            { name: "Гимнастика для глаз", time: 120, category: "eyes" },
+            { name: "Вращение плечами", time: 60, category: "shoulders" },
+            { name: "Скручивание сидя", time: 120, category: "back neck" }
+        ];
+        
+        // Переменные таймера
+        let currentExerciseIndex = 0;
+        let timerInterval;
+        let timeLeft = 60;
+        let isRunning = false;
+        
+        // Элементы таймера
+        const timerSection = document.getElementById('timerSection');
+        const minutesElement = document.getElementById('minutes');
+        const secondsElement = document.getElementById('seconds');
+        const currentExerciseElement = document.getElementById('currentExercise');
+        const exerciseNameElement = document.getElementById('exerciseName');
+        const progressBar = document.getElementById('progressBar');
+        const startTimerBtn = document.getElementById('startTimer');
+        const pauseTimerBtn = document.getElementById('pauseTimer');
+        const resetTimerBtn = document.getElementById('resetTimer');
+        const nextExerciseBtn = document.getElementById('nextExercise');
+        const startWorkoutBtn = document.getElementById('startWorkout');
+        const startFullWorkoutBtn = document.getElementById('startFullWorkout');
+        
+        // Функция обновления таймера
+        function updateTimer() {
+            const minutes = Math.floor(timeLeft / 60);
+            const seconds = timeLeft % 60;
+            
+            minutesElement.textContent = minutes.toString().padStart(2, '0');
+            secondsElement.textContent = seconds.toString().padStart(2, '0');
+            
+            // Обновление прогресс-бара
+            const totalTime = exercises[currentExerciseIndex].time;
+            const progress = ((totalTime - timeLeft) / totalTime) * 100;
+            progressBar.style.width = `${progress}%`;
+            
+            if (timeLeft <= 0) {
+                clearInterval(timerInterval);
+                isRunning = false;
+                startTimerBtn.disabled = true;
+                pauseTimerBtn.disabled = true;
+                nextExerciseBtn.disabled = false;
+                
+                // Звуковое оповещение (можно добавить звук)
+                if (currentExerciseIndex < exercises.length - 1) {
+                    currentExerciseElement.textContent = "Упражнение завершено! Можно перейти к следующему.";
+                } else {
+                    currentExerciseElement.textContent = "Тренировка завершена! Отличная работа!";
+                }
+            }
+        }
+        
+        // Старт таймера
+        function startTimer() {
+            if (isRunning) return;
+            
+            isRunning = true;
+            startTimerBtn.disabled = true;
+            pauseTimerBtn.disabled = false;
+            
+            timerInterval = setInterval(() => {
+                timeLeft--;
+                updateTimer();
+            }, 1000);
+        }
+        
+        // Пауза таймера
+        function pauseTimer() {
+            clearInterval(timerInterval);
+            isRunning = false;
+            startTimerBtn.disabled = false;
+            pauseTimerBtn.disabled = true;
+        }
+        
+        // Сброс таймера
+        function resetTimer() {
+            clearInterval(timerInterval);
+            isRunning = false;
+            timeLeft = exercises[currentExerciseIndex].time;
+            updateTimer();
+            startTimerBtn.disabled = false;
+            pauseTimerBtn.disabled = true;
+            nextExerciseBtn.disabled = false;
+            currentExerciseElement.textContent = "Таймер сброшен. Готовы начать?";
+        }
+        
+        // Следующее упражнение
+        function nextExercise() {
+            if (currentExerciseIndex < exercises.length - 1) {
+                currentExerciseIndex++;
+                timeLeft = exercises[currentExerciseIndex].time;
+                exerciseNameElement.textContent = exercises[currentExerciseIndex].name;
+                updateTimer();
+                startTimerBtn.disabled = false;
+                pauseTimerBtn.disabled = true;
+                nextExerciseBtn.disabled = false;
+                currentExerciseElement.textContent = `Готовы к упражнению: ${exercises[currentExerciseIndex].name}`;
+            } else {
+                // Тренировка завершена
+                currentExerciseIndex = 0;
+                timeLeft = exercises[0].time;
+                exerciseNameElement.textContent = exercises[0].name;
+                updateTimer();
+                timerSection.style.display = 'none';
+                currentExerciseElement.textContent = "Тренировка завершена! Вы молодец!";
+            }
+        }
+        
+        // Начать тренировку (отдельное упражнение)
+        function startExercise(exerciseName) {
+            timerSection.style.display = 'block';
+            
+            // Найти индекс упражнения по имени
+            const index = exercises.findIndex(ex => ex.name === exerciseName);
+            if (index !== -1) {
+                currentExerciseIndex = index;
+                timeLeft = exercises[currentExerciseIndex].time;
+                exerciseNameElement.textContent = exercises[currentExerciseIndex].name;
+                updateTimer();
+                currentExerciseElement.textContent = `Начинаем: ${exerciseName}`;
+                
+                // Прокрутка к таймеру
+                timerSection.scrollIntoView({ behavior: 'smooth' });
+            }
+        }
+        
+        // Начать полную тренировку
+        function startFullWorkout() {
+            timerSection.style.display = 'block';
+            currentExerciseIndex = 0;
+            timeLeft = exercises[0].time;
+            exerciseNameElement.textContent = exercises[0].name;
+            updateTimer();
+            currentExerciseElement.textContent = `Начинаем полную разминку! Первое упражнение: ${exercises[0].name}`;
+            
+            // Прокрутка к таймеру
+            timerSection.scrollIntoView({ behavior: 'smooth' });
+        }
+        
+        // Назначение обработчиков событий
+        startTimerBtn.addEventListener('click', startTimer);
+        pauseTimerBtn.addEventListener('click', pauseTimer);
+        resetTimerBtn.addEventListener('click', resetTimer);
+        nextExerciseBtn.addEventListener('click', nextExercise);
+        startWorkoutBtn.addEventListener('click', () => startFullWorkout());
+        startFullWorkoutBtn.addEventListener('click', startFullWorkout);
+        
+        // Кнопки "Начать это упражнение"
+        document.querySelectorAll('.start-exercise').forEach(button => {
+            button.addEventListener('click', function() {
+                const exerciseName = this.getAttribute('data-exercise');
+                startExercise(exerciseName);
+            });
+        });
+        
+        // Фильтрация упражнений
+        document.querySelectorAll('.filter-btn').forEach(button => {
+            button.addEventListener('click', function() {
+                // Убрать активный класс у всех кнопок
+                document.querySelectorAll('.filter-btn').forEach(btn => {
+                    btn.classList.remove('active');
+                });
+                
+                // Добавить активный класс текущей кнопке
+                this.classList.add('active');
+                
+                const filter = this.getAttribute('data-filter');
+                const exerciseCards = document.querySelectorAll('.exercise-card');
+                
+                exerciseCards.forEach(card => {
+                    if (filter === 'all') {
+                        card.style.display = 'block';
+                    } else {
+                        const categories = card.getAttribute('data-category').split(' ');
+                        if (categories.includes(filter)) {
+                            card.style.display = 'block';
+                        } else {
+                            card.style.display = 'none';
+                        }
+                    }
+                });
+            });
+        });
+        
+        // Плавная прокрутка к якорям
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                if (this.getAttribute('href') !== '#') {
+                    e.preventDefault();
+                    const targetId = this.getAttribute('href');
+                    if (targetId === '#') return;
+                    
+                    const targetElement = document.querySelector(targetId);
+                    if (targetElement) {
+                        window.scrollTo({
+                            top: targetElement.offsetTop - 80,
+                            behavior: 'smooth'
+                        });
+                        
+                        // Закрыть мобильное меню после клика
+                        document.querySelector('.nav-list').classList.remove('show');
+                    }
+                }
+            });
+        });
+        
+        // Инициализация таймера
+        updateTimer();
+    </script>
+</body>
+</html>

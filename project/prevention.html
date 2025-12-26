@@ -1,0 +1,1192 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IT-ЗОЖ | Профилактика заболеваний</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Montserrat:wght@600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Шапка сайта -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <a href="index.html">
+                    <i class="fas fa-code"></i>
+                    <span class="logo-text">IT-ЗОЖ</span>
+                </a>
+            </div>
+            
+            <!-- Навигационное меню -->
+            <nav class="nav">
+                <ul class="nav-list">
+                    <li class="nav-item"><a href="index.html" class="nav-link"><i class="fas fa-home"></i> Главная</a></li>
+                    <li class="nav-item"><a href="warm-up.html" class="nav-link"><i class="fas fa-running"></i> Разминка</a></li>
+                    <li class="nav-item"><a href="activity.html" class="nav-link"><i class="fas fa-bicycle"></i> Активность</a></li>
+                    <li class="nav-item"><a href="schedule.html" class="nav-link"><i class="fas fa-bed"></i> Режим и сон</a></li>
+                    <li class="nav-item"><a href="nutrition.html" class="nav-link"><i class="fas fa-apple-alt"></i> Питание</a></li>
+                    <li class="nav-item"><a href="prevention.html" class="nav-link active"><i class="fas fa-shield-alt"></i> Профилактика</a></li>
+                </ul>
+                
+                <!-- Кнопка меню для мобильных устройств -->
+                <button class="menu-toggle" id="menuToggle">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Основной контент -->
+    <main>
+        <!-- Герой-секция для страницы профилактики -->
+        <section class="hero hero-small hero-prevention">
+            <div class="container">
+                <div class="hero-content">
+                    <h1 class="hero-title">Профилактика заболеваний программиста</h1>
+                    <p class="hero-subtitle">Предотвратить проблему проще, чем лечить. Узнайте о самых распространенных профессиональных заболеваниях в IT и как их избежать с помощью простых профилактических мер.</p>
+                    <div class="hero-buttons">
+                        <a href="#checkup" class="btn btn-outline">Чек-лист здоровья</a>
+                        <a href="#workspace" class="btn btn-primary">
+                            <i class="fas fa-desktop"></i> Настройка рабочего места
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Секция "Основные риски" -->
+        <section class="section">
+            <div class="container">
+                <h2 class="section-title">Основные профессиональные риски в IT</h2>
+                <p class="section-subtitle">Сидячая работа создает специфические угрозы для здоровья. Знание этих рисков — первый шаг к их предотвращению.</p>
+                
+                <div class="risks-accordion">
+                    <!-- Риск 1: Зрение -->
+                    <div class="risk-item">
+                        <div class="risk-header">
+                            <div class="risk-icon">
+                                <i class="fas fa-eye"></i>
+                            </div>
+                            <h3>Проблемы со зрением</h3>
+                            <span class="risk-indicator high-risk">Высокий риск</span>
+                            <i class="fas fa-chevron-down risk-toggle"></i>
+                        </div>
+                        <div class="risk-content">
+                            <div class="risk-details">
+                                <div class="risk-problems">
+                                    <h4>Возможные заболевания:</h4>
+                                    <ul>
+                                        <li><strong>Компьютерный зрительный синдром</strong> - сухость, покраснение, усталость глаз</li>
+                                        <li><strong>Прогрессирующая миопия</strong> - ухудшение зрения вдаль</li>
+                                        <li><strong>Спазм аккомодации</strong> - нарушение фокусировки</li>
+                                        <li><strong>Синдром сухого глаза</strong> - недостаточное увлажнение</li>
+                                    </ul>
+                                </div>
+                                <div class="risk-prevention">
+                                    <h4>Профилактика:</h4>
+                                    <ul>
+                                        <li>Правило 20-20-20: каждые 20 минут смотреть на объект в 20 футах (6 метрах) в течение 20 секунд</li>
+                                        <li>Регулярное моргание (15-20 раз в минуту)</li>
+                                        <li>Использование увлажняющих капель при необходимости</li>
+                                        <li>Адекватное освещение рабочего места</li>
+                                        <li>Регулярная проверка зрения (1 раз в год)</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="risk-action">
+                                <button class="btn btn-outline btn-small add-to-checklist" data-risk="vision">
+                                    <i class="fas fa-plus"></i> Добавить в чек-лист
+                                </button>
+                                <a href="warm-up.html#exercises" class="btn btn-outline btn-small">
+                                    <i class="fas fa-running"></i> Упражнения для глаз
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Риск 2: Опорно-двигательный аппарат -->
+                    <div class="risk-item">
+                        <div class="risk-header">
+                            <div class="risk-icon">
+                                <i class="fas fa-backbone"></i>
+                            </div>
+                            <h3>Проблемы с позвоночником и суставами</h3>
+                            <span class="risk-indicator high-risk">Высокий риск</span>
+                            <i class="fas fa-chevron-down risk-toggle"></i>
+                        </div>
+                        <div class="risk-content">
+                            <div class="risk-details">
+                                <div class="risk-problems">
+                                    <h4>Возможные заболевания:</h4>
+                                    <ul>
+                                        <li><strong>Остеохондроз</strong> - дегенеративные изменения позвоночника</li>
+                                        <li><strong>Сколиоз</strong> - искривление позвоночника</li>
+                                        <li><strong>Протрузии и грыжи межпозвоночных дисков</strong></li>
+                                        <li><strong>Туннельный синдром запястья</strong> (карпальный синдром)</li>
+                                        <li><strong>Эпикондилит</strong> ("локоть теннисиста")</li>
+                                    </ul>
+                                </div>
+                                <div class="risk-prevention">
+                                    <h4>Профилактика:</h4>
+                                    <ul>
+                                        <li>Эргономичная организация рабочего места</li>
+                                        <li>Регулярная смена позы (каждые 30-40 минут)</li>
+                                        <li>Упражнения для укрепления мышц спины и корпуса</li>
+                                        <li>Использование эргономичной мыши и клавиатуры</li>
+                                        <li>Подставки под запястья при работе с мышью и клавиатурой</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="risk-action">
+                                <button class="btn btn-outline btn-small add-to-checklist" data-risk="spine">
+                                    <i class="fas fa-plus"></i> Добавить в чек-лист
+                                </button>
+                                <a href="warm-up.html" class="btn btn-outline btn-small">
+                                    <i class="fas fa-running"></i> Упражнения для спины
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Риск 3: Сердечно-сосудистая система -->
+                    <div class="risk-item">
+                        <div class="risk-header">
+                            <div class="risk-icon">
+                                <i class="fas fa-heartbeat"></i>
+                            </div>
+                            <h3>Сердечно-сосудистые заболевания</h3>
+                            <span class="risk-indicator medium-risk">Средний риск</span>
+                            <i class="fas fa-chevron-down risk-toggle"></i>
+                        </div>
+                        <div class="risk-content">
+                            <div class="risk-details">
+                                <div class="risk-problems">
+                                    <h4>Возможные заболевания:</h4>
+                                    <ul>
+                                        <li><strong>Гиподинамия</strong> - недостаток движения</li>
+                                        <li><strong>Варикозное расширение вен</strong></li>
+                                        <li><strong>Артериальная гипертензия</strong></li>
+                                        <li><strong>Повышенный риск тромбозов</strong></li>
+                                        <li><strong>Метаболический синдром</strong></li>
+                                    </ul>
+                                </div>
+                                <div class="risk-prevention">
+                                    <h4>Профилактика:</h4>
+                                    <ul>
+                                        <li>Регулярная физическая активность (не менее 150 минут в неделю)</li>
+                                        <li>Прогулки во время перерывов</li>
+                                        <li>Контроль веса и артериального давления</li>
+                                        <li>Здоровое питание с ограничением соли и насыщенных жиров</li>
+                                        <li>Отказ от курения и ограничение алкоголя</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="risk-action">
+                                <button class="btn btn-outline btn-small add-to-checklist" data-risk="heart">
+                                    <i class="fas fa-plus"></i> Добавить в чек-лист
+                                </button>
+                                <a href="activity.html" class="btn btn-outline btn-small">
+                                    <i class="fas fa-bicycle"></i> Активность
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Риск 4: Психическое здоровье -->
+                    <div class="risk-item">
+                        <div class="risk-header">
+                            <div class="risk-icon">
+                                <i class="fas fa-brain"></i>
+                            </div>
+                            <h3>Психоэмоциональные расстройства</h3>
+                            <span class="risk-indicator high-risk">Высокий риск</span>
+                            <i class="fas fa-chevron-down risk-toggle"></i>
+                        </div>
+                        <div class="risk-content">
+                            <div class="risk-details">
+                                <div class="risk-problems">
+                                    <h4>Возможные заболевания:</h4>
+                                    <ul>
+                                        <li><strong>Синдром эмоционального выгорания</strong></li>
+                                        <li><strong>Хронический стресс</strong></li>
+                                        <li><strong>Тревожные расстройства</strong></li>
+                                        <li><strong>Депрессия</strong></li>
+                                        <li><strong>Нарушения сна</strong></li>
+                                    </ul>
+                                </div>
+                                <div class="risk-prevention">
+                                    <h4>Профилактика:</h4>
+                                    <ul>
+                                        <li>Регулярные перерывы и отдых</li>
+                                        <li>Техники релаксации и медитации</li>
+                                        <li>Баланс работы и личной жизни</li>
+                                        <li>Хобби и интересы вне работы</li>
+                                        <li>Достаточный сон (7-9 часов)</li>
+                                        <li>Социальные контакты и поддержка</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="risk-action">
+                                <button class="btn btn-outline btn-small add-to-checklist" data-risk="mental">
+                                    <i class="fas fa-plus"></i> Добавить в чек-лист
+                                </button>
+                                <a href="schedule.html" class="btn btn-outline btn-small">
+                                    <i class="fas fa-bed"></i> Режим и сон
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Риск 5: Обмен веществ -->
+                    <div class="risk-item">
+                        <div class="risk-header">
+                            <div class="risk-icon">
+                                <i class="fas fa-weight"></i>
+                            </div>
+                            <h3>Нарушения обмена веществ</h3>
+                            <span class="risk-indicator medium-risk">Средний риск</span>
+                            <i class="fas fa-chevron-down risk-toggle"></i>
+                        </div>
+                        <div class="risk-content">
+                            <div class="risk-details">
+                                <div class="risk-problems">
+                                    <h4>Возможные заболевания:</h4>
+                                    <ul>
+                                        <li><strong>Ожирение</strong></li>
+                                        <li><strong>Сахарный диабет 2-го типа</strong></li>
+                                        <li><strong>Метаболический синдром</strong></li>
+                                        <li><strong>Нарушения липидного обмена</strong></li>
+                                    </ul>
+                                </div>
+                                <div class="risk-prevention">
+                                    <h4>Профилактика:</h4>
+                                    <ul>
+                                        <li>Регулярная физическая активность</li>
+                                        <li>Сбалансированное питание с контролем калорий</li>
+                                        <li>Ограничение быстрых углеводов и сладких напитков</li>
+                                        <li>Регулярные медицинские обследования</li>
+                                        <li>Контроль веса и объема талии</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="risk-action">
+                                <button class="btn btn-outline btn-small add-to-checklist" data-risk="metabolism">
+                                    <i class="fas fa-plus"></i> Добавить в чек-лист
+                                </button>
+                                <a href="nutrition.html" class="btn btn-outline btn-small">
+                                    <i class="fas fa-apple-alt"></i> Питание
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Секция "Настройка рабочего места" -->
+        <section class="section section-gray" id="workspace">
+            <div class="container">
+                <h2 class="section-title">Эргономика рабочего места</h2>
+                <p class="section-subtitle">Правильная организация рабочего пространства может предотвратить множество проблем со здоровьем.</p>
+                
+                <div class="workspace-guide">
+                    <div class="workspace-visual">
+                        <div class="workspace-diagram">
+                            <div class="diagram-item" style="top: 10%; left: 50%;" data-item="monitor">
+                                <div class="dot"></div>
+                                <div class="tooltip">Монитор на уровне глаз, на расстоянии 50-70 см</div>
+                            </div>
+                            <div class="diagram-item" style="top: 40%; left: 30%;" data-item="keyboard">
+                                <div class="dot"></div>
+                                <div class="tooltip">Клавиатура на уровне локтей, запястья прямые</div>
+                            </div>
+                            <div class="diagram-item" style="top: 40%; left: 70%;" data-item="mouse">
+                                <div class="dot"></div>
+                                <div class="tooltip">Мышь рядом с клавиатурой, на одной высоте</div>
+                            </div>
+                            <div class="diagram-item" style="top: 70%; left: 50%;" data-item="chair">
+                                <div class="dot"></div>
+                                <div class="tooltip">Спинка стула поддерживает поясницу</div>
+                            </div>
+                            <div class="diagram-item" style="top: 90%; left: 50%;" data-item="feet">
+                                <div class="dot"></div>
+                                <div class="tooltip">Ступни полностью на полу, колени под углом 90°</div>
+                            </div>
+
+                        </div>
+                    </div>
+                    
+                    <div class="workspace-checklist">
+                        <h3>Чек-лист эргономичного рабочего места:</h3>
+                        
+                        <div class="ergo-item">
+                            <div class="ergo-checkbox">
+                                <input type="checkbox" id="ergo1" class="ergo-check">
+                                <label for="ergo1"></label>
+                            </div>
+                            <div class="ergo-content">
+                                <h4>Экран на правильной высоте</h4>
+                                <p>Верх монитора на уровне глаз или чуть ниже. Расстояние до глаз — 50-70 см.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="ergo-item">
+                            <div class="ergo-checkbox">
+                                <input type="checkbox" id="ergo2" class="ergo-check">
+                                <label for="ergo2"></label>
+                            </div>
+                            <div class="ergo-content">
+                                <h4>Правильное положение рук</h4>
+                                <p>Локти под углом 90°, запястья прямые, не опираются на острый край стола.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="ergo-item">
+                            <div class="ergo-checkbox">
+                                <input type="checkbox" id="ergo3" class="ergo-check">
+                                <label for="ergo3"></label>
+                            </div>
+                            <div class="ergo-content">
+                                <h4>Поддержка для спины</h4>
+                                <p>Спинка стула поддерживает естественный изгиб позвоночника в пояснице.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="ergo-item">
+                            <div class="ergo-checkbox">
+                                <input type="checkbox" id="ergo4" class="ergo-check">
+                                <label for="ergo4"></label>
+                            </div>
+                            <div class="ergo-content">
+                                <h4>Ноги на полу</h4>
+                                <p>Ступни полностью стоят на полу, колени под углом 90-100 градусов.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="ergo-item">
+                            <div class="ergo-checkbox">
+                                <input type="checkbox" id="ergo5" class="ergo-check">
+                                <label for="ergo5"></label>
+                            </div>
+                            <div class="ergo-content">
+                                <h4>Достаточное освещение</h4>
+                                <p>Яркость экрана соответствует освещению в комнате. Нет бликов на мониторе.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="ergo-item">
+                            <div class="ergo-checkbox">
+                                <input type="checkbox" id="ergo6" class="ergo-check">
+                                <label for="ergo6"></label>
+                            </div>
+                            <div class="ergo-content">
+                                <h4>Организация проводов</h4>
+                                <p>Провода не мешают движению, аккуратно собраны и закреплены.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="ergo-progress">
+                            <h4>Прогресс настройки:</h4>
+                            <div class="progress-bar-ergo">
+                                <div class="progress-fill-ergo" id="ergoProgress"></div>
+                            </div>
+                            <div class="progress-text">
+                                <span id="ergoCompleted">0</span> из 6 пунктов выполнено
+                            </div>
+                            <button id="resetErgo" class="btn btn-outline btn-small">
+                                <i class="fas fa-redo"></i> Сбросить чек-лист
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="workspace-tips">
+                    <h3>Дополнительные советы:</h3>
+                    <div class="tips-grid">
+                        <div class="tip-card">
+                            <div class="tip-icon">
+                                <i class="fas fa-sun"></i>
+                            </div>
+                            <h4>Естественный свет</h4>
+                            <p>Рабочее место у окна снижает нагрузку на глаза. Монитор должен быть перпендикулярно окну.</p>
+                        </div>
+                        
+                        <div class="tip-card">
+                            <div class="tip-icon">
+                                <i class="fas fa-wind"></i>
+                            </div>
+                            <h4>Свежий воздух</h4>
+                            <p>Регулярное проветривание улучшает концентрацию и предотвращает головные боли.</p>
+                        </div>
+                        
+                        <div class="tip-card">
+                            <div class="tip-icon">
+                                <i class="fas fa-ruler-combined"></i>
+                            </div>
+                            <h4>Правильные гаджеты</h4>
+                            <p>Эргономичная клавиатура, вертикальная мышь, коврик с поддержкой запястья.</p>
+                        </div>
+                        
+                        <div class="tip-card">
+                            <div class="tip-icon">
+                                <i class="fas fa-chair"></i>
+                            </div>
+                            <h4>Качественный стул</h4>
+                            <p>Офисное кресло с регулируемой высотой, подлокотниками и поддержкой поясницы.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Секция с чек-листом здоровья -->
+        <section class="section" id="checkup">
+            <div class="container">
+                <h2 class="section-title">Ежедневный чек-лист здоровья IT-специалиста</h2>
+                <p class="section-subtitle">Небольшие ежедневные привычки, которые помогут сохранить здоровье в долгосрочной перспективе.</p>
+                
+                <div class="checkup-container">
+                    <div class="checkup-list">
+                        <h3>Ваш персональный чек-лист</h3>
+                        <p class="checkup-subtitle">Отмечайте выполненные пункты. Цель — выполнять 70%+ ежедневно.</p>
+                        
+                        <div class="checkup-items">
+                            <!-- Пункты будут сгенерированы JavaScript -->
+                        </div>
+                        
+                        <div class="checkup-stats">
+                            <div class="stat">
+                                <div class="stat-value" id="checkupToday">0%</div>
+                                <div class="stat-label">Выполнено сегодня</div>
+                            </div>
+                            <div class="stat">
+                                <div class="stat-value" id="checkupStreak">0</div>
+                                <div class="stat-label">Дней подряд</div>
+                            </div>
+                            <div class="stat">
+                                <div class="stat-value" id="checkupTotal">0</div>
+                                <div class="stat-label">Всего выполнено</div>
+                            </div>
+                        </div>
+                        
+                        <div class="checkup-controls">
+                            <button id="resetCheckup" class="btn btn-outline">
+                                <i class="fas fa-redo"></i> Сбросить день
+                            </button>
+                            <button id="shareProgress" class="btn btn-primary">
+                                <i class="fas fa-share"></i> Поделиться прогрессом
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <div class="checkup-calendar">
+                        <h3>Календарь привычек</h3>
+                        <div class="calendar-grid">
+                            <!-- Календарь будет сгенерирован JavaScript -->
+                        </div>
+                        <div class="calendar-legend">
+                            <div class="legend-item">
+                                <div class="legend-color poor"></div>
+                                <span>0-30%</span>
+                            </div>
+                            <div class="legend-item">
+                                <div class="legend-color fair"></div>
+                                <span>31-60%</span>
+                            </div>
+                            <div class="legend-item">
+                                <div class="legend-color good"></div>
+                                <span>61-80%</span>
+                            </div>
+                            <div class="legend-item">
+                                <div class="legend-color excellent"></div>
+                                <span>81-100%</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="checkup-tips">
+                    <h3>Как сформировать привычки:</h3>
+                    <div class="habit-tips">
+                        <div class="habit-tip">
+                            <div class="tip-number">1</div>
+                            <div class="tip-content">
+                                <h4>Начинайте с малого</h4>
+                                <p>Выберите 1-2 простых пункта и выполняйте их ежедневно 2-3 недели.</p>
+                            </div>
+                        </div>
+                        <div class="habit-tip">
+                            <div class="tip-number">2</div>
+                            <div class="tip-content">
+                                <h4>Связывайте с существующими привычками</h4>
+                                <p>"После утреннего кофе — делаю 5 минут зарядки".</p>
+                            </div>
+                        </div>
+                        <div class="habit-tip">
+                            <div class="tip-number">3</div>
+                            <div class="tip-content">
+                                <h4>Отслеживайте прогресс</h4>
+                                <p>Визуализация прогресса мотивирует продолжать.</p>
+                            </div>
+                        </div>
+                        <div class="habit-tip">
+                            <div class="tip-number">4</div>
+                            <div class="tip-content">
+                                <h4>Не ругайте себя за пропуски</h4>
+                                <p>Пропустили день — просто продолжайте на следующий.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Секция "Регулярные обследования" -->
+        <section class="section section-gray">
+            <div class="container">
+                <h2 class="section-title">Регулярные медицинские обследования</h2>
+                <p class="section-subtitle">Профилактические осмотры помогают выявить проблемы на ранних стадиях.</p>
+                
+                <div class="exams-timeline">
+                    <div class="exam-item">
+                        <div class="exam-frequency">Каждый год</div>
+                        <div class="exam-content">
+                            <h4>Общий осмотр и анализы</h4>
+                            <ul>
+                                <li>Общий анализ крови и мочи</li>
+                                <li>Биохимический анализ крови (сахар, холестерин)</li>
+                                <li>Измерение артериального давления</li>
+                                <li>Консультация терапевта</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="exam-item">
+                        <div class="exam-frequency">1 раз в 2 года</div>
+                        <div class="exam-content">
+                            <h4>Узкие специалисты</h4>
+                            <ul>
+                                <li>Офтальмолог (проверка зрения, глазное дно)</li>
+                                <li>Невролог (при жалобах на головные боли, онемение)</li>
+                                <li>Ортопед/вертебролог (при болях в спине)</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="exam-item">
+                        <div class="exam-frequency">По показаниям</div>
+                        <div class="exam-content">
+                            <h4>Дополнительные обследования</h4>
+                            <ul>
+                                <li>УЗИ органов брюшной полости</li>
+                                <li>ЭКГ и УЗИ сердца (после 30 лет или при факторах риска)</li>
+                                <li>Консультация психолога/психотерапевта (при стрессе, выгорании)</li>
+                                <li>Массаж, физиотерапия (при проблемах с опорно-двигательным аппаратом)</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="exam-reminder">
+                    <h3>Напоминание о следующем осмотре</h3>
+                    <div class="reminder-form">
+                        <div class="form-group">
+                            <label for="nextExam">Тип осмотра:</label>
+                            <select id="nextExam" class="form-select">
+                                <option value="general">Общий ежегодный осмотр</option>
+                                <option value="eyes">Проверка зрения</option>
+                                <option value="spine">Консультация ортопеда</option>
+                                <option value="heart">Кардиологическое обследование</option>
+                                <option value="dental">Стоматолог</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="examDate">Дата следующего осмотра:</label>
+                            <input type="date" id="examDate" class="form-input">
+                        </div>
+                        <button id="setExamReminder" class="btn btn-primary">
+                            <i class="fas fa-bell"></i> Установить напоминание
+                        </button>
+                    </div>
+                    <div class="reminder-list">
+                        <h4>Предстоящие осмотры:</h4>
+                        <ul id="upcomingExams">
+                            <!-- Список будет сгенерирован JavaScript -->
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Секция с призывом к действию -->
+        <section class="section cta-section">
+            <div class="container">
+                <h2 class="cta-title">Профилактика начинается сегодня!</h2>
+                <p class="cta-text">Не ждите, пока появятся проблемы. Начните с одного простого действия из чек-листа прямо сейчас.</p>
+                <div class="cta-buttons">
+                    <button id="startCheckup" class="btn btn-primary btn-large">
+                        <i class="fas fa-check-circle"></i> Начать чек-лист сегодня
+                    </button>
+                    <a href="index.html" class="btn btn-outline btn-large">
+                        <i class="fas fa-home"></i> Вернуться на главную
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Подвал сайта -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <i class="fas fa-code"></i>
+                    <span class="logo-text">IT-ЗОЖ</span>
+                </div>
+                <p class="footer-description">Учебный проект о здоровом образе жизни для программистов. Советы и рекомендации, которые помогут сохранить здоровье в условиях сидячей работы.</p>
+                
+                <div class="footer-links">
+                    <h4 class="footer-title">Быстрые ссылки</h4>
+                    <ul class="footer-list">
+                        <li><a href="index.html">Главная</a></li>
+                        <li><a href="warm-up.html">Разминка</a></li>
+                        <li><a href="activity.html">Активность</a></li>
+                        <li><a href="schedule.html">Режим и сон</a></li>
+                        <li><a href="nutrition.html">Питание</a></li>
+                        <li><a href="prevention.html">Профилактика</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-info">
+                    <h4 class="footer-title">Информация</h4>
+                    <p>© <span id="currentYear"></span> IT-ЗОЖ. Учебный проект.</p>
+                    <p>Для начинающих веб-разработчиков.</p>
+                
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p><strong>Важно:</strong> Этот сайт создан в образовательных целях. При наличии серьезных проблем со здоровьем обязательно обратитесь к врачу. Профилактика не заменяет профессиональную медицинскую помощь.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Скрипты -->
+    <script>
+        // Текущий год в футере
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+        
+        // Мобильное меню
+        document.getElementById('menuToggle').addEventListener('click', function() {
+            document.querySelector('.nav-list').classList.toggle('show');
+        });
+        
+        // Аккордеон рисков
+        document.querySelectorAll('.risk-toggle').forEach(toggle => {
+            toggle.addEventListener('click', function() {
+                const riskItem = this.closest('.risk-item');
+                riskItem.classList.toggle('active');
+                this.classList.toggle('fa-chevron-down');
+                this.classList.toggle('fa-chevron-up');
+            });
+        });
+        
+        // Чек-лист эргономики
+        const ergoCheckboxes = document.querySelectorAll('.ergo-check');
+        const ergoProgress = document.getElementById('ergoProgress');
+        const ergoCompleted = document.getElementById('ergoCompleted');
+        const resetErgoButton = document.getElementById('resetErgo');
+        
+        // Загрузка состояния эргономики из LocalStorage
+        let ergoState = JSON.parse(localStorage.getItem('ergoState')) || {
+            ergo1: false, ergo2: false, ergo3: false,
+            ergo4: false, ergo5: false, ergo6: false
+        };
+        
+        // Инициализация эргономики
+        function initErgoChecklist() {
+            ergoCheckboxes.forEach(checkbox => {
+                const id = checkbox.id;
+                checkbox.checked = ergoState[id] || false;
+                
+                checkbox.addEventListener('change', function() {
+                    ergoState[this.id] = this.checked;
+                    localStorage.setItem('ergoState', JSON.stringify(ergoState));
+                    updateErgoProgress();
+                });
+            });
+            
+            updateErgoProgress();
+        }
+        
+        // Обновление прогресса эргономики
+        function updateErgoProgress() {
+            const checkedCount = Array.from(ergoCheckboxes).filter(cb => cb.checked).length;
+            const totalCount = ergoCheckboxes.length;
+            const percentage = Math.round((checkedCount / totalCount) * 100);
+            
+            ergoCompleted.textContent = checkedCount;
+            ergoProgress.style.width = `${percentage}%`;
+        }
+        
+        // Сброс эргономики
+        resetErgoButton.addEventListener('click', function() {
+            if (confirm('Сбросить прогресс настройки рабочего места?')) {
+                ergoCheckboxes.forEach(checkbox => {
+                    checkbox.checked = false;
+                    ergoState[checkbox.id] = false;
+                });
+                
+                localStorage.setItem('ergoState', JSON.stringify(ergoState));
+                updateErgoProgress();
+                showNotification('Чек-лист эргономики сброшен!');
+            }
+        });
+        
+        // Интерактивная схема рабочего места
+        document.querySelectorAll('.diagram-item').forEach(item => {
+            item.addEventListener('mouseenter', function() {
+                this.querySelector('.tooltip').style.opacity = '1';
+                this.querySelector('.tooltip').style.visibility = 'visible';
+            });
+            
+            item.addEventListener('mouseleave', function() {
+                this.querySelector('.tooltip').style.opacity = '0';
+                this.querySelector('.tooltip').style.visibility = 'hidden';
+            });
+        });
+        
+        // Чек-лист здоровья
+        const checkupItemsContainer = document.querySelector('.checkup-items');
+        const calendarGrid = document.querySelector('.calendar-grid');
+        const checkupTodayElement = document.getElementById('checkupToday');
+        const checkupStreakElement = document.getElementById('checkupStreak');
+        const checkupTotalElement = document.getElementById('checkupTotal');
+        const resetCheckupButton = document.getElementById('resetCheckup');
+        const shareProgressButton = document.getElementById('shareProgress');
+        const startCheckupButton = document.getElementById('startCheckup');
+        
+        // Пункты чек-листа
+        const checkupItems = [
+            { id: 'water', name: 'Выпил 2 литра воды', category: 'basic', points: 2 },
+            { id: 'breaks', name: 'Делал перерывы по методу Помодоро', category: 'work', points: 3 },
+            { id: 'eye_exercise', name: 'Выполнил гимнастику для глаз', category: 'health', points: 2 },
+            { id: 'stretch', name: 'Сделал разминку для спины и шеи', category: 'health', points: 3 },
+            { id: 'walk', name: 'Прошел не менее 5000 шагов', category: 'activity', points: 4 },
+            { id: 'fruit', name: 'Съел 2 порции фруктов/овощей', category: 'nutrition', points: 2 },
+            { id: 'sleep', name: 'Спал 7-8 часов', category: 'basic', points: 3 },
+            { id: 'posture', name: 'Следил за осанкой во время работы', category: 'work', points: 2 },
+            { id: 'no_sugar', name: 'Не ел сладкие перекусы', category: 'nutrition', points: 2 },
+            { id: 'relax', name: 'Выделил время для расслабления', category: 'mental', points: 2 }
+        ];
+        
+        // Хранение данных чек-листа
+        let checkupData = JSON.parse(localStorage.getItem('checkupData')) || {
+            streak: 0,
+            totalCompleted: 0,
+            history: {},
+            lastDate: null
+        };
+        
+        // Инициализация чек-листа
+        function initCheckup() {
+            const today = new Date().toDateString();
+            
+            // Проверка стрика (последовательных дней)
+            if (checkupData.lastDate) {
+                const lastDate = new Date(checkupData.lastDate);
+                const yesterday = new Date();
+                yesterday.setDate(yesterday.getDate() - 1);
+                
+                if (lastDate.toDateString() === yesterday.toDateString()) {
+                    // Продолжаем стрик
+                } else if (lastDate.toDateString() !== today) {
+                    // Стрик прерван
+                    checkupData.streak = 0;
+                }
+            }
+            
+            // Создание записей на сегодня, если их нет
+            if (!checkupData.history[today]) {
+                checkupData.history[today] = {};
+                checkupItems.forEach(item => {
+                    checkupData.history[today][item.id] = false;
+                });
+            }
+            
+            renderCheckupItems();
+            renderCalendar();
+            updateCheckupStats();
+            
+            // Сохранение данных
+            localStorage.setItem('checkupData', JSON.stringify(checkupData));
+        }
+        
+        // Рендер пунктов чек-листа
+        function renderCheckupItems() {
+            const today = new Date().toDateString();
+            const todayData = checkupData.history[today] || {};
+            
+            checkupItemsContainer.innerHTML = '';
+            
+            checkupItems.forEach(item => {
+                const isChecked = todayData[item.id] || false;
+                
+                const itemElement = document.createElement('div');
+                itemElement.className = 'checkup-item';
+                itemElement.innerHTML = `
+                    <div class="checkup-checkbox">
+                        <input type="checkbox" id="check_${item.id}" ${isChecked ? 'checked' : ''}>
+                        <label for="check_${item.id}"></label>
+                    </div>
+                    <div class="checkup-content">
+                        <h4>${item.name}</h4>
+                        <div class="checkup-category ${item.category}">${getCategoryName(item.category)} • ${item.points} балла</div>
+                    </div>
+                `;
+                
+                const checkbox = itemElement.querySelector('input');
+                checkbox.addEventListener('change', function() {
+                    todayData[item.id] = this.checked;
+                    checkupData.history[today] = todayData;
+                    
+                    // Обновление статистики
+                    if (this.checked) {
+                        checkupData.totalCompleted++;
+                    } else {
+                        checkupData.totalCompleted = Math.max(0, checkupData.totalCompleted - 1);
+                    }
+                    
+                    // Обновление последней даты
+                    checkupData.lastDate = today;
+                    
+                    localStorage.setItem('checkupData', JSON.stringify(checkupData));
+                    updateCheckupStats();
+                    renderCalendar();
+                });
+                
+                checkupItemsContainer.appendChild(itemElement);
+            });
+        }
+        
+        // Рендер календаря привычек
+        function renderCalendar() {
+            calendarGrid.innerHTML = '';
+            
+            // Получаем последние 30 дней
+            const days = [];
+            for (let i = 29; i >= 0; i--) {
+                const date = new Date();
+                date.setDate(date.getDate() - i);
+                days.push(date);
+            }
+            
+            days.forEach(date => {
+                const dateStr = date.toDateString();
+                const dayData = checkupData.history[dateStr];
+                
+                const dayElement = document.createElement('div');
+                dayElement.className = 'calendar-day';
+                dayElement.setAttribute('data-date', dateStr);
+                
+                // Расчет процента выполнения для дня
+                let percentage = 0;
+                if (dayData) {
+                    const completed = Object.values(dayData).filter(v => v).length;
+                    percentage = Math.round((completed / checkupItems.length) * 100);
+                }
+                
+                // Определение цвета по проценту
+                let colorClass = 'empty';
+                if (percentage > 0) {
+                    if (percentage <= 30) colorClass = 'poor';
+                    else if (percentage <= 60) colorClass = 'fair';
+                    else if (percentage <= 80) colorClass = 'good';
+                    else colorClass = 'excellent';
+                }
+                
+                dayElement.className = `calendar-day ${colorClass}`;
+                dayElement.title = `${date.toLocaleDateString()}: ${percentage}% выполнено`;
+                dayElement.innerHTML = `<span>${date.getDate()}</span>`;
+                
+                calendarGrid.appendChild(dayElement);
+            });
+        }
+        
+        // Обновление статистики чек-листа
+        function updateCheckupStats() {
+            const today = new Date().toDateString();
+            const todayData = checkupData.history[today] || {};
+            
+            const completedToday = Object.values(todayData).filter(v => v).length;
+            const percentageToday = Math.round((completedToday / checkupItems.length) * 100);
+            
+            checkupTodayElement.textContent = `${percentageToday}%`;
+            checkupStreakElement.textContent = checkupData.streak;
+            checkupTotalElement.textContent = checkupData.totalCompleted;
+        }
+        
+        // Получение названия категории
+        function getCategoryName(category) {
+            const categories = {
+                'basic': 'Основное',
+                'work': 'Работа',
+                'health': 'Здоровье',
+                'activity': 'Активность',
+                'nutrition': 'Питание',
+                'mental': 'Психика'
+            };
+            return categories[category] || category;
+        }
+        
+        // Сброс чек-листа на сегодня
+        resetCheckupButton.addEventListener('click', function() {
+            if (confirm('Сбросить все выполненные пункты на сегодня?')) {
+                const today = new Date().toDateString();
+                if (checkupData.history[today]) {
+                    Object.keys(checkupData.history[today]).forEach(key => {
+                        checkupData.history[today][key] = false;
+                    });
+                }
+                
+                localStorage.setItem('checkupData', JSON.stringify(checkupData));
+                renderCheckupItems();
+                updateCheckupStats();
+                renderCalendar();
+                showNotification('Чек-лист на сегодня сброшен!');
+            }
+        });
+        
+        // Поделиться прогрессом
+        shareProgressButton.addEventListener('click', function() {
+            const today = new Date().toDateString();
+            const todayData = checkupData.history[today] || {};
+            const completedToday = Object.values(todayData).filter(v => v).length;
+            const percentageToday = Math.round((completedToday / checkupItems.length) * 100);
+            
+            const shareText = `Мой прогресс в IT-ЗОЖ сегодня: ${percentageToday}% выполнено! 🎯\nСтрик: ${checkupData.streak} дней\nВсего выполнено: ${checkupData.totalCompleted} пунктов\n\n#ITЗОЖ #ЗдоровыйПрограммист`;
+            
+            if (navigator.share) {
+                navigator.share({
+                    title: 'Мой прогресс в IT-ЗОЖ',
+                    text: shareText,
+                    url: window.location.href
+                }).catch(console.error);
+            } else {
+                // Копирование в буфер обмена
+                navigator.clipboard.writeText(shareText).then(() => {
+                    showNotification('Текст прогресса скопирован в буфер обмена!');
+                }).catch(() => {
+                    prompt('Скопируйте текст для分享:', shareText);
+                });
+            }
+        });
+        
+        // Начать чек-лист сегодня
+        startCheckupButton.addEventListener('click', function() {
+            document.getElementById('checkup').scrollIntoView({ behavior: 'smooth' });
+            showNotification('Отличное решение! Начните с одного пункта и постепенно добавляйте новые привычки.');
+        });
+        
+        // Добавление риска в чек-лист
+        document.querySelectorAll('.add-to-checklist').forEach(button => {
+            button.addEventListener('click', function() {
+                const risk = this.getAttribute('data-risk');
+                addRiskToChecklist(risk);
+            });
+        });
+        
+        // Добавление риска в чек-лист
+        function addRiskToChecklist(risk) {
+            const riskItems = {
+                'vision': { name: 'Выполнил гимнастику для глаз', category: 'health' },
+                'spine': { name: 'Сделал упражнения для спины', category: 'health' },
+                'heart': { name: 'Занимался физической активностью', category: 'activity' },
+                'mental': { name: 'Практиковал техники релаксации', category: 'mental' },
+                'metabolism': { name: 'Следил за питанием', category: 'nutrition' }
+            };
+            
+            const item = riskItems[risk];
+            if (item) {
+                // Добавляем пункт в чек-лист на сегодня
+                const today = new Date().toDateString();
+                if (!checkupData.history[today]) {
+                    checkupData.history[today] = {};
+                }
+                
+                // Создаем уникальный ID
+                const id = `${risk}_${Date.now()}`;
+                checkupData.history[today][id] = false;
+                
+                // Обновляем отображение
+                renderCheckupItems();
+                updateCheckupStats();
+                localStorage.setItem('checkupData', JSON.stringify(checkupData));
+                
+                showNotification(`Пункт "${item.name}" добавлен в ваш чек-лист на сегодня!`);
+            }
+        }
+        
+        // Напоминания о медицинских осмотрах
+        const examReminderButton = document.getElementById('setExamReminder');
+        const upcomingExamsList = document.getElementById('upcomingExams');
+        
+        let examReminders = JSON.parse(localStorage.getItem('examReminders')) || [];
+        
+        // Инициализация напоминаний
+        function initExamReminders() {
+            updateUpcomingExamsList();
+            
+            examReminderButton.addEventListener('click', function() {
+                const examType = document.getElementById('nextExam').value;
+                const examDate = document.getElementById('examDate').value;
+                
+                if (!examDate) {
+                    alert('Пожалуйста, выберите дату');
+                    return;
+                }
+                
+                const examName = document.getElementById('nextExam').options[document.getElementById('nextExam').selectedIndex].text;
+                const reminder = {
+                    id: Date.now(),
+                    type: examType,
+                    name: examName,
+                    date: examDate,
+                    notified: false
+                };
+                
+                examReminders.push(reminder);
+                localStorage.setItem('examReminders', JSON.stringify(examReminders));
+                
+                updateUpcomingExamsList();
+                showNotification(`Напоминание об осмотре "${examName}" установлено на ${new Date(examDate).toLocaleDateString()}`);
+                
+                // Очистка формы
+                document.getElementById('examDate').value = '';
+            });
+        }
+        
+        // Обновление списка предстоящих осмотров
+        function updateUpcomingExamsList() {
+            upcomingExamsList.innerHTML = '';
+            
+            // Сортируем по дате
+            examReminders.sort((a, b) => new Date(a.date) - new Date(b.date));
+            
+            // Фильтруем прошедшие (оставляем только будущие)
+            const today = new Date().toISOString().split('T')[0];
+            examReminders = examReminders.filter(exam => exam.date >= today);
+            localStorage.setItem('examReminders', JSON.stringify(examReminders));
+            
+            if (examReminders.length === 0) {
+                const li = document.createElement('li');
+                li.textContent = 'Нет запланированных осмотров';
+                upcomingExamsList.appendChild(li);
+            } else {
+                examReminders.forEach(exam => {
+                    const li = document.createElement('li');
+                    const date = new Date(exam.date);
+                    const daysLeft = Math.ceil((date - new Date()) / (1000 * 60 * 60 * 24));
+                    
+                    li.innerHTML = `
+                        <strong>${exam.name}</strong>
+                        <span>${date.toLocaleDateString()} (через ${daysLeft} дней)</span>
+                        <button class="remove-exam" data-id="${exam.id}">×</button>
+                    `;
+                    
+                    upcomingExamsList.appendChild(li);
+                });
+                
+                // Обработчики для кнопок удаления
+                document.querySelectorAll('.remove-exam').forEach(button => {
+                    button.addEventListener('click', function() {
+                        const id = parseInt(this.getAttribute('data-id'));
+                        examReminders = examReminders.filter(exam => exam.id !== id);
+                        localStorage.setItem('examReminders', JSON.stringify(examReminders));
+                        updateUpcomingExamsList();
+                        showNotification('Напоминание об осмотре удалено');
+                    });
+                });
+            }
+        }
+        
+        // Функция показа уведомления
+        function showNotification(message) {
+            const notification = document.createElement('div');
+            notification.className = 'notification';
+            notification.innerHTML = `
+                <i class="fas fa-check-circle"></i>
+                <span>${message}</span>
+            `;
+            
+            notification.style.cssText = `
+                position: fixed;
+                top: 20px;
+                right: 20px;
+                background: #2ecc71;
+                color: white;
+                padding: 15px 20px;
+                border-radius: 8px;
+                box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+                display: flex;
+                align-items: center;
+                gap: 10px;
+                z-index: 10000;
+                animation: slideIn 0.3s ease;
+            `;
+            
+            const style = document.createElement('style');
+            style.textContent = `
+                @keyframes slideIn {
+                    from { transform: translateX(100%); opacity: 0; }
+                    to { transform: translateX(0); opacity: 1; }
+                }
+                @keyframes slideOut {
+                    from { transform: translateX(0); opacity: 1; }
+                    to { transform: translateX(100%); opacity: 0; }
+                }
+            `;
+            document.head.appendChild(style);
+            
+            document.body.appendChild(notification);
+            
+            setTimeout(() => {
+                notification.style.animation = 'slideOut 0.3s ease';
+                setTimeout(() => {
+                    document.body.removeChild(notification);
+                }, 300);
+            }, 5000);
+        }
+        
+        // Плавная прокрутка
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                if (this.getAttribute('href') !== '#') {
+                    e.preventDefault();
+                    const targetId = this.getAttribute('href');
+                    if (targetId === '#') return;
+                    
+                    const targetElement = document.querySelector(targetId);
+                    if (targetElement) {
+                        window.scrollTo({
+                            top: targetElement.offsetTop - 80,
+                            behavior: 'smooth'
+                        });
+                        
+                        document.querySelector('.nav-list').classList.remove('show');
+                    }
+                }
+            });
+        });
+        
+        // Инициализация при загрузке
+        document.addEventListener('DOMContentLoaded', function() {
+            initErgoChecklist();
+            initCheckup();
+            initExamReminders();
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,877 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IT-ЗОЖ | Режим дня и сон</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Montserrat:wght@600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Шапка сайта -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <a href="index.html">
+                    <i class="fas fa-code"></i>
+                    <span class="logo-text">IT-ЗОЖ</span>
+                </a>
+            </div>
+            
+            <!-- Навигационное меню -->
+            <nav class="nav">
+                <ul class="nav-list">
+                    <li class="nav-item"><a href="index.html" class="nav-link"><i class="fas fa-home"></i> Главная</a></li>
+                    <li class="nav-item"><a href="warm-up.html" class="nav-link"><i class="fas fa-running"></i> Разминка</a></li>
+                    <li class="nav-item"><a href="activity.html" class="nav-link"><i class="fas fa-bicycle"></i> Активность</a></li>
+                    <li class="nav-item"><a href="schedule.html" class="nav-link active"><i class="fas fa-bed"></i> Режим и сон</a></li>
+                    <li class="nav-item"><a href="nutrition.html" class="nav-link"><i class="fas fa-apple-alt"></i> Питание</a></li>
+                    <li class="nav-item"><a href="prevention.html" class="nav-link"><i class="fas fa-shield-alt"></i> Профилактика</a></li>
+                </ul>
+                
+                <!-- Кнопка меню для мобильных устройств -->
+                <button class="menu-toggle" id="menuToggle">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Основной контент -->
+    <main>
+        <!-- Герой-секция для страницы режима и сна -->
+        <section class="hero hero-small hero-sleep">
+            <div class="container">
+                <div class="hero-content">
+                    <h1 class="hero-title">Режим дня и сон</h1>
+                    <p class="hero-subtitle">Качественный сон и правильный распорядок дня — основа продуктивности и здоровья программиста. Узнайте, как организовать свой день для максимальной эффективности без ущерба для здоровья.</p>
+                    <div class="hero-buttons">
+                        <a href="#importance" class="btn btn-outline">Важность сна</a>
+                        <a href="#planner" class="btn btn-primary">
+                            <i class="fas fa-calendar-alt"></i> Планировщик дня
+                        </a>
+                    </div>
+                </div>
+                
+            </div>
+        </section>
+
+        <!-- Секция "Важность сна" -->
+        <section class="section" id="importance">
+            <div class="container">
+                <h2 class="section-title">Почему сон так важен для программиста?</h2>
+                <p class="section-subtitle">Недостаток сна снижает когнитивные функции, креативность и способность решать сложные задачи — именно то, что нужно программисту ежедневно.</p>
+                
+                <div class="sleep-stats">
+                    <div class="stat-card">
+                        <div class="stat-number">-40%</div>
+                        <div class="stat-text">Снижение продуктивности при недосыпе</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">7-9</div>
+                        <div class="stat-text">Часов сна необходимо взрослому человеку</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">×2</div>
+                        <div class="stat-text">Риск ошибок в коде при усталости</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">+50%</div>
+                        <div class="stat-text">Улучшение памяти после качественного сна</div>
+                    </div>
+                </div>
+                
+                <div class="sleep-importance">
+                    <div class="importance-card">
+                        <div class="importance-icon">
+                            <i class="fas fa-brain"></i>
+                        </div>
+                        <h3>Когнитивные функции</h3>
+                        <p>Во время сна мозг обрабатывает информацию, укрепляет память и создает нейронные связи. Без сна сложнее учиться новым технологиям и запоминать синтаксис.</p>
+                    </div>
+                    
+                    <div class="importance-card">
+                        <div class="importance-icon">
+                            <i class="fas fa-lightbulb"></i>
+                        </div>
+                        <h3>Креативность и решение проблем</h3>
+                        <p>Многие программисты замечают, что "утро вечера мудренее" — после сна часто находится решение сложной задачи, над которой бились весь день.</p>
+                    </div>
+                    
+                    <div class="importance-card">
+                        <div class="importance-icon">
+                            <i class="fas fa-heartbeat"></i>
+                        </div>
+                        <h3>Физическое здоровье</h3>
+                        <p>Сон регулирует гормоны, восстанавливает мышцы, укрепляет иммунитет. Хронический недосып увеличивает риск заболеваний сердца, диабета и ожирения.</p>
+                    </div>
+                    
+                    <div class="importance-card">
+                        <div class="importance-icon">
+                            <i class="fas fa-smile"></i>
+                        </div>
+                        <h3>Эмоциональное состояние</h3>
+                        <p>Недостаток сна делает нас раздражительными, снижает стрессоустойчивость и повышает риск выгорания — частой проблемы в IT-сфере.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Секция "Метод Помодоро и перерывы" -->
+        <section class="section section-gray">
+            <div class="container">
+                <h2 class="section-title">Метод Помодоро и важность перерывов</h2>
+                <p class="section-subtitle">Работа без перерывов приводит к усталости, снижению концентрации и ошибкам. Используйте технику тайм-менеджмента для поддержания продуктивности.</p>
+                
+                <div class="pomodoro-guide">
+                    <div class="pomodoro-visual">
+                        <div class="pomodoro-cycle">
+                            <div class="work-phase">
+                                <div class="phase-icon">
+                                    <i class="fas fa-laptop-code"></i>
+                                </div>
+                                <h4>25 минут</h4>
+                                <p>Интенсивная работа</p>
+                                <div class="phase-tip">Сосредоточьтесь на одной задаче</div>
+                            </div>
+                            
+                            <div class="break-phase">
+                                <div class="phase-icon">
+                                    <i class="fas fa-coffee"></i>
+                                </div>
+                                <h4>5 минут</h4>
+                                <p>Короткий перерыв</p>
+                                <div class="phase-tip">Встаньте, разомнитесь, отойдите от экрана</div>
+                            </div>
+                            
+                            <div class="long-break">
+                                <div class="phase-icon">
+                                    <i class="fas fa-utensils"></i>
+                                </div>
+                                <h4>15-30 минут</h4>
+                                <p>Длинный перерыв</p>
+                                <div class="phase-tip">После 4 циклов - полноценный отдых</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="pomodoro-benefits">
+                        <h3>Преимущества метода Помодоро:</h3>
+                        <ul class="benefits-list">
+                            <li>
+                                <i class="fas fa-check-circle"></i>
+                                <span><strong>Предотвращает выгорание</strong> - регулярные перерывы не дают усталости накапливаться</span>
+                            </li>
+                            <li>
+                                <i class="fas fa-check-circle"></i>
+                                <span><strong>Повышает концентрацию</strong> - знание, что скоро перерыв, помогает сосредоточиться</span>
+                            </li>
+                            <li>
+                                <i class="fas fa-check-circle"></i>
+                                <span><strong>Улучшает оценку времени</strong> - учит реалистично планировать задачи</span>
+                            </li>
+                            <li>
+                                <i class="fas fa-check-circle"></i>
+                                <span><strong>Снижает прокрастинацию</strong> - легче начать, если работа всего на 25 минут</span>
+                            </li>
+                            <li>
+                                <i class="fas fa-check-circle"></i>
+                                <span><strong>Заставляет двигаться</strong> - регулярные перерывы = регулярная разминка</span>
+                            </li>
+                        </ul>
+                        
+                        <div class="pomodoro-timer">
+                            <h4>Попробуйте прямо сейчас:</h4>
+                            <div class="timer" id="pomodoroTimer">
+                                <div class="timer-display">25:00</div>
+                                <div class="timer-controls">
+                                    <button id="startPomodoro" class="btn btn-primary btn-small">
+                                        <i class="fas fa-play"></i> Старт
+                                    </button>
+                                    <button id="pausePomodoro" class="btn btn-outline btn-small" disabled>
+                                        <i class="fas fa-pause"></i> Пауза
+                                    </button>
+                                    <button id="resetPomodoro" class="btn btn-outline btn-small">
+                                        <i class="fas fa-redo"></i> Сброс
+                                    </button>
+                                </div>
+                                <div class="timer-phase">Готовы к работе?</div>
+                                <div class="cycles-counter">
+                                    <span>Циклов завершено: </span>
+                                    <span id="completedCycles">0</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Секция "Идеальный распорядок дня" -->
+        <section class="section">
+            <div class="container">
+                <h2 class="section-title">Примерный распорядок дня программиста</h2>
+                <p class="section-subtitle">Баланс работы, отдыха, физической активности и сна. Настройте под свои биоритмы и рабочий график.</p>
+                
+                <div class="daily-schedule" id="planner">
+                    <div class="schedule-timeline">
+                        <!-- Утро -->
+                        <div class="time-slot morning">
+                            <div class="time-header">
+                                <h3><i class="fas fa-sun"></i> Утро (6:00 - 9:00)</h3>
+                            </div>
+                            <div class="time-activities">
+                                <div class="activity" data-duration="60" data-type="sleep">
+                                    <div class="activity-title">Пробуждение</div>
+                                    <div class="activity-desc">Подъем без будильника, если выспался</div>
+                                    <button class="activity-toggle" data-activity="wakeup">✓ Выполнено</button>
+                                </div>
+                                <div class="activity" data-duration="15" data-type="health">
+                                    <div class="activity-title">Стакан воды</div>
+                                    <div class="activity-desc">Восполнение потери жидкости за ночь</div>
+                                    <button class="activity-toggle" data-activity="water">✓ Выполнено</button>
+                                </div>
+                                <div class="activity" data-duration="20" data-type="exercise">
+                                    <div class="activity-title">Зарядка / Медитация</div>
+                                    <div class="activity-desc">Легкая разминка или дыхательные практики</div>
+                                    <button class="activity-toggle" data-activity="exercise">✓ Выполнено</button>
+                                </div>
+                                <div class="activity" data-duration="30" data-type="nutrition">
+                                    <div class="activity-title">Полезный завтрак</div>
+                                    <div class="activity-desc">Белки + сложные углеводы (яйца, овсянка)</div>
+                                    <button class="activity-toggle" data-activity="breakfast">✓ Выполнено</button>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Рабочий день -->
+                        <div class="time-slot work">
+                            <div class="time-header">
+                                <h3><i class="fas fa-briefcase"></i> Рабочий день (9:00 - 18:00)</h3>
+                            </div>
+                            <div class="time-activities">
+                                <div class="activity" data-duration="150" data-type="work">
+                                    <div class="activity-title">Наиболее сложные задачи</div>
+                                    <div class="activity-desc">Пик продуктивности - решайте сложные проблемы</div>
+                                    <button class="activity-toggle" data-activity="hardwork">✓ Выполнено</button>
+                                </div>
+                                <div class="activity" data-duration="60" data-type="break">
+                                    <div class="activity-title">Обеденный перерыв</div>
+                                    <div class="activity-desc">Отойдите от компьютера, прогуляйтесь, поешьте</div>
+                                    <button class="activity-toggle" data-activity="lunch">✓ Выполнено</button>
+                                </div>
+                                <div class="activity" data-duration="180" data-type="work">
+                                    <div class="activity-title">Рутинные задачи</div>
+                                    <div class="activity-desc">Code review, документация, meetings</div>
+                                    <button class="activity-toggle" data-activity="routine">✓ Выполнено</button>
+                                </div>
+                                <div class="activity" data-duration="15" data-type="exercise">
+                                    <div class="activity-title">Послеобеденная разминка</div>
+                                    <div class="activity-desc">Короткий комплекс упражнений для спины и глаз</div>
+                                    <button class="activity-toggle" data-activity="afternoon_exercise">✓ Выполнено</button>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Вечер -->
+                        <div class="time-slot evening">
+                            <div class="time-header">
+                                <h3><i class="fas fa-moon"></i> Вечер (18:00 - 23:00)</h3>
+                            </div>
+                            <div class="time-activities">
+                                <div class="activity" data-duration="60" data-type="exercise">
+                                    <div class="activity-title">Физическая активность</div>
+                                    <div class="activity-desc">Тренировка, прогулка, бассейн, йога</div>
+                                    <button class="activity-toggle" data-activity="evening_exercise">✓ Выполнено</button>
+                                </div>
+                                <div class="activity" data-duration="45" data-type="nutrition">
+                                    <div class="activity-title">Легкий ужин</div>
+                                    <div class="activity-desc">Белки + овощи, минимум углеводов</div>
+                                    <button class="activity-toggle" data-activity="dinner">✓ Выполнено</button>
+                                </div>
+                                <div class="activity" data-duration="120" data-type="hobby">
+                                    <div class="activity-title">Хобби и отдых</div>
+                                    <div class="activity-desc">Чтение, музыка, семья, хобби без экрана</div>
+                                    <button class="activity-toggle" data-activity="hobby">✓ Выполнено</button>
+                                </div>
+                                <div class="activity" data-duration="60" data-type="relax">
+                                    <div class="activity-title">Цифровой детокс</div>
+                                    <div class="activity-desc">За 1 час до сна - никаких экранов</div>
+                                    <button class="activity-toggle" data-activity="detox">✓ Выполнено</button>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Ночь -->
+                        <div class="time-slot night">
+                            <div class="time-header">
+                                <h3><i class="fas fa-star"></i> Ночь (23:00 - 6:00)</h3>
+                            </div>
+                            <div class="time-activities">
+                                <div class="activity" data-duration="420" data-type="sleep">
+                                    <div class="activity-title">Качественный сон</div>
+                                    <div class="activity-desc">7 часов непрерывного сна в темноте и тишине</div>
+                                    <button class="activity-toggle" data-activity="sleep">✓ Выполнено</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="schedule-summary">
+                        <h3>Ваш прогресс сегодня:</h3>
+                        <div class="progress-circles">
+                            <div class="progress-circle" data-type="sleep">
+                                <div class="circle-chart" id="sleepChart">
+                                    <svg width="100" height="100" viewBox="0 0 100 100">
+                                        <circle cx="50" cy="50" r="45" fill="none" stroke="#e0e0e0" stroke-width="10"></circle>
+                                        <circle cx="50" cy="50" r="45" fill="none" stroke="#3498db" stroke-width="10" 
+                                                stroke-dasharray="283" stroke-dashoffset="283" stroke-linecap="round" 
+                                                id="sleepCircle"></circle>
+                                    </svg>
+                                    <div class="circle-text">
+                                        <span class="circle-value" id="sleepValue">0%</span>
+                                        <span class="circle-label">Сон</span>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="progress-circle" data-type="work">
+                                <div class="circle-chart" id="workChart">
+                                    <svg width="100" height="100" viewBox="0 0 100 100">
+                                        <circle cx="50" cy="50" r="45" fill="none" stroke="#e0e0e0" stroke-width="10"></circle>
+                                        <circle cx="50" cy="50" r="45" fill="none" stroke="#2ecc71" stroke-width="10" 
+                                                stroke-dasharray="283" stroke-dashoffset="283" stroke-linecap="round" 
+                                                id="workCircle"></circle>
+                                    </svg>
+                                    <div class="circle-text">
+                                        <span class="circle-value" id="workValue">0%</span>
+                                        <span class="circle-label">Работа</span>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="progress-circle" data-type="health">
+                                <div class="circle-chart" id="healthChart">
+                                    <svg width="100" height="100" viewBox="0 0 100 100">
+                                        <circle cx="50" cy="50" r="45" fill="none" stroke="#e0e0e0" stroke-width="10"></circle>
+                                        <circle cx="50" cy="50" r="45" fill="none" stroke="#e74c3c" stroke-width="10" 
+                                                stroke-dasharray="283" stroke-dashoffset="283" stroke-linecap="round" 
+                                                id="healthCircle"></circle>
+                                    </svg>
+                                    <div class="circle-text">
+                                        <span class="circle-value" id="healthValue">0%</span>
+                                        <span class="circle-label">Здоровье</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="daily-total">
+                            <h4>Итоги дня:</h4>
+                            <div class="total-stats">
+                                <div class="total-stat">
+                                    <span class="stat-label">Продуктивная работа:</span>
+                                    <span class="stat-value" id="workTotal">0 ч</span>
+                                </div>
+                                <div class="total-stat">
+                                    <span class="stat-label">Физическая активность:</span>
+                                    <span class="stat-value" id="exerciseTotal">0 ч</span>
+                                </div>
+                                <div class="total-stat">
+                                    <span class="stat-label">Качество сна:</span>
+                                    <span class="stat-value" id="sleepTotal">0 ч</span>
+                                </div>
+                                <div class="total-stat">
+                                    <span class="stat-label">Выполнено пунктов:</span>
+                                    <span class="stat-value" id="completedTotal">0/13</span>
+                                </div>
+                            </div>
+                            <button id="resetDay" class="btn btn-outline btn-small">
+                                <i class="fas fa-redo"></i> Сбросить день
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Секция "Советы для улучшения сна" -->
+        <section class="section section-gray">
+            <div class="container">
+                <h2 class="section-title">Как улучшить качество сна?</h2>
+                
+                <div class="sleep-tips">
+                    <div class="sleep-tip">
+                        <div class="tip-number">1</div>
+                        <div class="tip-content">
+                            <h3>Соблюдайте режим</h3>
+                            <p>Ложитесь и вставайте в одно и то же время даже в выходные. Это помогает настроить внутренние часы организма.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="sleep-tip">
+                        <div class="tip-number">2</div>
+                        <div class="tip-content">
+                            <h3>Создайте ритуал перед сном</h3>
+                            <p>За 30-60 минут до сна: теплый душ, чтение бумажной книги, медитация, чай без кофеина.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="sleep-tip">
+                        <div class="tip-number">3</div>
+                        <div class="tip-content">
+                            <h3>Оптимизируйте спальню</h3>
+                            <p>Темнота (шторы-блэкаут), тишина (беруши), прохлада (18-20°C), удобный матрас и подушка.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="sleep-tip">
+                        <div class="tip-number">4</div>
+                        <div class="tip-content">
+                            <h3>Избегайте экранов перед сном</h3>
+                            <p>Синий свет от устройств подавляет мелатонин. Используйте ночной режим или откажитесь от гаджетов за час до сна.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="sleep-tip">
+                        <div class="tip-number">5</div>
+                        <div class="tip-content">
+                            <h3>Контролируйте питание и напитки</h3>
+                            <p>Не ешьте за 2-3 часа до сна. Ограничьте кофеин после 14:00 и алкоголь вечером.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="sleep-tip">
+                        <div class="tip-number">6</div>
+                        <div class="tip-content">
+                            <h3>Расслабляйтесь, если не можете уснуть</h3>
+                            <p>Если не спится 20 минут - встаньте, почитайте при тусклом свете, вернитесь в кровать когда захотите спать.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="sleep-tracker">
+                    <h3>Трекер сна на неделю</h3>
+                    <div class="tracker-grid">
+                        <div class="tracker-day">
+                            <div class="day-name">Пн</div>
+                            <div class="sleep-bar" data-hours="7">
+                                <div class="sleep-fill" style="height: 70%;"></div>
+                            </div>
+                            <div class="day-hours">7ч</div>
+                        </div>
+                        <div class="tracker-day">
+                            <div class="day-name">Вт</div>
+                            <div class="sleep-bar" data-hours="6">
+                                <div class="sleep-fill" style="height: 60%;"></div>
+                            </div>
+                            <div class="day-hours">6ч</div>
+                        </div>
+                        <div class="tracker-day">
+                            <div class="day-name">Ср</div>
+                            <div class="sleep-bar" data-hours="8">
+                                <div class="sleep-fill" style="height: 80%;"></div>
+                            </div>
+                            <div class="day-hours">8ч</div>
+                        </div>
+                        <div class="tracker-day">
+                            <div class="day-name">Чт</div>
+                            <div class="sleep-bar" data-hours="5">
+                                <div class="sleep-fill" style="height: 50%;"></div>
+                            </div>
+                            <div class="day-hours">5ч</div>
+                        </div>
+                        <div class="tracker-day">
+                            <div class="day-name">Пт</div>
+                            <div class="sleep-bar" data-hours="7">
+                                <div class="sleep-fill" style="height: 70%;"></div>
+                            </div>
+                            <div class="day-hours">7ч</div>
+                        </div>
+                        <div class="tracker-day">
+                            <div class="day-name">Сб</div>
+                            <div class="sleep-bar" data-hours="9">
+                                <div class="sleep-fill" style="height: 90%;"></div>
+                            </div>
+                            <div class="day-hours">9ч</div>
+                        </div>
+                        <div class="tracker-day">
+                            <div class="day-name">Вс</div>
+                            <div class="sleep-bar" data-hours="8">
+                                <div class="sleep-fill" style="height: 80%;"></div>
+                            </div>
+                            <div class="day-hours">8ч</div>
+                        </div>
+                    </div>
+                    <div class="tracker-average">
+                        <span>Среднее за неделю: <strong id="weeklyAverage">7.1 ч</strong></span>
+                        <span>Рекомендация: <strong>7-9 ч</strong></span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Секция с призывом к действию -->
+        <section class="section cta-section">
+            <div class="container">
+                <h2 class="cta-title">Начните с малого — ложитесь сегодня на час раньше!</h2>
+                <p class="cta-text">Даже небольшие изменения в режиме сна могут значительно улучшить вашу продуктивность и самочувствие.</p>
+                <div class="cta-buttons">
+                    <button id="setBedtime" class="btn btn-primary btn-large">
+                        <i class="fas fa-bell"></i> Установить напоминание ко сну
+                    </button>
+                    <a href="nutrition.html" class="btn btn-outline btn-large">
+                        Далее: Питание
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Подвал сайта -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <i class="fas fa-code"></i>
+                    <span class="logo-text">IT-ЗОЖ</span>
+                </div>
+                <p class="footer-description">Учебный проект о здоровом образе жизни для программистов. Советы и рекомендации, которые помогут сохранить здоровье в условиях сидячей работы.</p>
+                
+                <div class="footer-links">
+                    <h4 class="footer-title">Быстрые ссылки</h4>
+                    <ul class="footer-list">
+                        <li><a href="index.html">Главная</a></li>
+                        <li><a href="warm-up.html">Разминка</a></li>
+                        <li><a href="activity.html">Активность</a></li>
+                        <li><a href="schedule.html">Режим и сон</a></li>
+                        <li><a href="nutrition.html">Питание</a></li>
+                        <li><a href="prevention.html">Профилактика</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-info">
+                    <h4 class="footer-title">Информация</h4>
+                    <p>© <span id="currentYear"></span> IT-ЗОЖ. Учебный проект.</p>
+                    <p>Для начинающих веб-разработчиков.</p>
+                    
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>Сайт создан в образовательных целях. Консультация специалиста рекомендуется при серьезных проблемах со здоровьем.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Скрипты -->
+    <script>
+        // Текущий год в футере
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+        
+        // Мобильное меню
+        document.getElementById('menuToggle').addEventListener('click', function() {
+            document.querySelector('.nav-list').classList.toggle('show');
+        });
+        
+        // Таймер Помодоро
+        let pomodoroTime = 25 * 60; // 25 минут в секундах
+        let pomodoroInterval;
+        let isPomodoroRunning = false;
+        let isWorkPhase = true;
+        let completedCycles = 0;
+        
+        const pomodoroDisplay = document.querySelector('#pomodoroTimer .timer-display');
+        const startPomodoroBtn = document.getElementById('startPomodoro');
+        const pausePomodoroBtn = document.getElementById('pausePomodoro');
+        const resetPomodoroBtn = document.getElementById('resetPomodoro');
+        const timerPhase = document.querySelector('.timer-phase');
+        const completedCyclesElement = document.getElementById('completedCycles');
+        
+        function updatePomodoroDisplay() {
+            const minutes = Math.floor(pomodoroTime / 60);
+            const seconds = pomodoroTime % 60;
+            pomodoroDisplay.textContent = `${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+        }
+        
+        function startPomodoro() {
+            if (isPomodoroRunning) return;
+            
+            isPomodoroRunning = true;
+            startPomodoroBtn.disabled = true;
+            pausePomodoroBtn.disabled = false;
+            
+            pomodoroInterval = setInterval(() => {
+                pomodoroTime--;
+                updatePomodoroDisplay();
+                
+                if (pomodoroTime <= 0) {
+                    clearInterval(pomodoroInterval);
+                    isPomodoroRunning = false;
+                    
+                    // Оповещение
+                    if (isWorkPhase) {
+                        // Закончился рабочий период
+                        completedCycles++;
+                        completedCyclesElement.textContent = completedCycles;
+                        
+                        if (completedCycles % 4 === 0) {
+                            // Длинный перерыв
+                            pomodoroTime = 15 * 60;
+                            timerPhase.textContent = "Время для длинного перерыва (15 мин)!";
+                        } else {
+                            // Короткий перерыв
+                            pomodoroTime = 5 * 60;
+                            timerPhase.textContent = "Время для короткого перерыва (5 мин)!";
+                        }
+                        
+                        // Уведомление
+                        showNotification("Рабочий период завершен! Пора сделать перерыв.");
+                    } else {
+                        // Закончился перерыв
+                        pomodoroTime = 25 * 60;
+                        timerPhase.textContent = "Время работать! Следующие 25 минут.";
+                        showNotification("Перерыв завершен! Пора возвращаться к работе.");
+                    }
+                    
+                    isWorkPhase = !isWorkPhase;
+                    startPomodoroBtn.disabled = false;
+                    pausePomodoroBtn.disabled = true;
+                    
+                    // Звуковое оповещение (можно добавить звук)
+                    if (typeof Audio !== 'undefined') {
+                        const audio = new Audio('https://assets.mixkit.co/sfx/preview/mixkit-alarm-digital-clock-beep-989.mp3');
+                        audio.play();
+                    }
+                }
+            }, 1000);
+        }
+        
+        function pausePomodoro() {
+            clearInterval(pomodoroInterval);
+            isPomodoroRunning = false;
+            startPomodoroBtn.disabled = false;
+            pausePomodoroBtn.disabled = true;
+        }
+        
+        function resetPomodoro() {
+            clearInterval(pomodoroInterval);
+            isPomodoroRunning = false;
+            pomodoroTime = 25 * 60;
+            isWorkPhase = true;
+            startPomodoroBtn.disabled = false;
+            pausePomodoroBtn.disabled = true;
+            timerPhase.textContent = "Готовы к работе?";
+            updatePomodoroDisplay();
+        }
+        
+        // Планировщик дня
+        const dailyActivities = JSON.parse(localStorage.getItem('dailyActivities')) || {
+            wakeup: false, water: false, exercise: false, breakfast: false,
+            hardwork: false, lunch: false, routine: false, afternoon_exercise: false,
+            evening_exercise: false, dinner: false, hobby: false, detox: false, sleep: false
+        };
+        
+        // Обновление прогресс-кругов
+        function updateProgressCircles() {
+            const totalActivities = Object.keys(dailyActivities).length;
+            const completedActivities = Object.values(dailyActivities).filter(v => v).length;
+            
+            // Общий прогресс
+            const totalPercentage = Math.round((completedActivities / totalActivities) * 100);
+            
+            // Прогресс по категориям
+            const categories = {
+                sleep: { activities: ['wakeup', 'sleep'], completed: 0, total: 2 },
+                work: { activities: ['hardwork', 'routine'], completed: 0, total: 2 },
+                health: { activities: ['water', 'exercise', 'afternoon_exercise', 'evening_exercise', 'breakfast', 'lunch', 'dinner', 'detox', 'hobby'], completed: 0, total: 9 }
+            };
+            
+            // Расчет завершенных по категориям
+            for (const [category, data] of Object.entries(categories)) {
+                data.completed = data.activities.filter(activity => dailyActivities[activity]).length;
+                const percentage = Math.round((data.completed / data.total) * 100);
+                
+                // Обновление круговых диаграмм
+                const circle = document.getElementById(`${category}Circle`);
+                const valueElement = document.getElementById(`${category}Value`);
+                
+                if (circle && valueElement) {
+                    const offset = 283 - (283 * percentage / 100);
+                    circle.style.strokeDashoffset = offset;
+                    valueElement.textContent = `${percentage}%`;
+                }
+            }
+            
+            // Обновление итогов
+            document.getElementById('completedTotal').textContent = `${completedActivities}/${totalActivities}`;
+            
+            // Расчет времени (примерные значения)
+            const workHours = (dailyActivities.hardwork ? 2.5 : 0) + (dailyActivities.routine ? 3 : 0);
+            const exerciseHours = (dailyActivities.exercise ? 0.33 : 0) + (dailyActivities.afternoon_exercise ? 0.25 : 0) + (dailyActivities.evening_exercise ? 1 : 0);
+            const sleepHours = dailyActivities.sleep ? 7 : 0;
+            
+            document.getElementById('workTotal').textContent = `${workHours.toFixed(1)} ч`;
+            document.getElementById('exerciseTotal').textContent = `${exerciseHours.toFixed(1)} ч`;
+            document.getElementById('sleepTotal').textContent = `${sleepHours} ч`;
+        }
+        
+        // Обработчики для кнопок активности
+        document.querySelectorAll('.activity-toggle').forEach(button => {
+            button.addEventListener('click', function() {
+                const activity = this.getAttribute('data-activity');
+                dailyActivities[activity] = !dailyActivities[activity];
+                
+                // Обновление состояния кнопки
+                if (dailyActivities[activity]) {
+                    this.innerHTML = '<i class="fas fa-check"></i> Выполнено';
+                    this.classList.add('completed');
+                } else {
+                    this.innerHTML = '✓ Выполнено';
+                    this.classList.remove('completed');
+                }
+                
+                // Сохранение и обновление
+                localStorage.setItem('dailyActivities', JSON.stringify(dailyActivities));
+                updateProgressCircles();
+            });
+            
+            // Установка начального состояния
+            const activity = button.getAttribute('data-activity');
+            if (dailyActivities[activity]) {
+                button.innerHTML = '<i class="fas fa-check"></i> Выполнено';
+                button.classList.add('completed');
+            }
+        });
+        
+        // Сброс дня
+        document.getElementById('resetDay').addEventListener('click', function() {
+            if (confirm('Сбросить все выполненные активности за сегодня?')) {
+                Object.keys(dailyActivities).forEach(key => {
+                    dailyActivities[key] = false;
+                });
+                localStorage.setItem('dailyActivities', JSON.stringify(dailyActivities));
+                
+                // Сброс кнопок
+                document.querySelectorAll('.activity-toggle').forEach(button => {
+                    button.innerHTML = '✓ Выполнено';
+                    button.classList.remove('completed');
+                });
+                
+                updateProgressCircles();
+                showNotification('День сброшен! Начните заново.');
+            }
+        });
+        
+        // Установка напоминания ко сну
+        document.getElementById('setBedtime').addEventListener('click', function() {
+            if ('Notification' in window && Notification.permission === 'granted') {
+                new Notification('IT-ЗОЖ напоминает', {
+                    body: 'Через час пора готовиться ко сну! Пора откладывать гаджеты и начинать вечерний ритуал.',
+                    icon: 'https://cdn-icons-png.flaticon.com/512/3067/3067256.png'
+                });
+            } else if ('Notification' in window && Notification.permission !== 'denied') {
+                Notification.requestPermission().then(permission => {
+                    if (permission === 'granted') {
+                        this.click();
+                    }
+                });
+            } else {
+                alert('Напоминание установлено (в учебных целях). В реальном приложении здесь была бы интеграция с календарем.');
+            }
+        });
+        
+        // Расчет среднего сна за неделю
+        function calculateSleepAverage() {
+            const sleepBars = document.querySelectorAll('.sleep-bar');
+            let totalHours = 0;
+            
+            sleepBars.forEach(bar => {
+                totalHours += parseInt(bar.getAttribute('data-hours'));
+            });
+            
+            const average = totalHours / sleepBars.length;
+            document.getElementById('weeklyAverage').textContent = average.toFixed(1) + ' ч';
+        }
+        
+        // Функция показа уведомления
+        function showNotification(message) {
+            const notification = document.createElement('div');
+            notification.className = 'notification';
+            notification.innerHTML = `
+                <i class="fas fa-check-circle"></i>
+                <span>${message}</span>
+            `;
+            
+            notification.style.cssText = `
+                position: fixed;
+                top: 20px;
+                right: 20px;
+                background: #2ecc71;
+                color: white;
+                padding: 15px 20px;
+                border-radius: 8px;
+                box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+                display: flex;
+                align-items: center;
+                gap: 10px;
+                z-index: 10000;
+                animation: slideIn 0.3s ease;
+            `;
+            
+            const style = document.createElement('style');
+            style.textContent = `
+                @keyframes slideIn {
+                    from { transform: translateX(100%); opacity: 0; }
+                    to { transform: translateX(0); opacity: 1; }
+                }
+                @keyframes slideOut {
+                    from { transform: translateX(0); opacity: 1; }
+                    to { transform: translateX(100%); opacity: 0; }
+                }
+            `;
+            document.head.appendChild(style);
+            
+            document.body.appendChild(notification);
+            
+            setTimeout(() => {
+                notification.style.animation = 'slideOut 0.3s ease';
+                setTimeout(() => {
+                    document.body.removeChild(notification);
+                }, 300);
+            }, 5000);
+        }
+        
+        // Инициализация
+        startPomodoroBtn.addEventListener('click', startPomodoro);
+        pausePomodoroBtn.addEventListener('click', pausePomodoro);
+        resetPomodoroBtn.addEventListener('click', resetPomodoro);
+        
+        updatePomodoroDisplay();
+        updateProgressCircles();
+        calculateSleepAverage();
+        
+        // Плавная прокрутка
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                if (this.getAttribute('href') !== '#') {
+                    e.preventDefault();
+                    const targetId = this.getAttribute('href');
+                    if (targetId === '#') return;
+                    
+                    const targetElement = document.querySelector(targetId);
+                    if (targetElement) {
+                        window.scrollTo({
+                            top: targetElement.offsetTop - 80,
+                            behavior: 'smooth'
+                        });
+                        
+                        document.querySelector('.nav-list').classList.remove('show');
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+</html>
