@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="ru" data-bs-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Название Компании | Главная</title>
+
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+    <!-- Дополнительные шрифты (опционально) -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+
+    <!-- Кастомные стили -->
+    <style>
+        :root {
+            --primary-color: #0d6efd;
+            --secondary-color: #6c757d;
+            --accent-color: #ff6b35;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+
+        h1, h2, h3, h4, h5, .fw-bold {
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        .bg-gradient {
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+        }
+
+        .bg-gradient-primary {
+            background: linear-gradient(135deg, var(--primary-color) 0%, #0a58ca 100%);
+        }
+
+        .hover-shadow {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .hover-shadow:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1) !important;
+        }
+
+        .transition-all {
+            transition: all 0.3s ease;
+        }
+
+        .hover-white:hover {
+            color: #fff !important;
+        }
+
+        /* Стили для слайдера */
+        .hero-slider {
+            height: 600px;
+            overflow: hidden;
+        }
+
+        .carousel-item {
+            height: 600px;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        .carousel-item:nth-child(1) {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
+                              url('https://images.unsplash.com/photo-1497366754035-f200968a6e72?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');
+        }
+
+        .carousel-item:nth-child(2) {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
+                              url('https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');
+        }
+
+        .carousel-item:nth-child(3) {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
+                              url('https://images.unsplash.com/photo-1559136555-9303baea8ebd?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');
+        }
+
+        .carousel-caption {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            bottom: auto;
+            text-align: left;
+            padding: 2rem;
+            max-width: 800px;
+            width: 100%;
+        }
+
+        .carousel-caption h1 {
+            font-size: 3.5rem;
+            font-weight: 800;
+            margin-bottom: 1.5rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+
+        .carousel-caption p {
+            font-size: 1.25rem;
+            margin-bottom: 2rem;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+        }
+
+        .slider-btn {
+            padding: 0.75rem 2rem;
+            font-size: 1.1rem;
+            font-weight: 600;
+            border-radius: 50px;
+            transition: all 0.3s ease;
+        }
+
+        .slider-btn-primary {
+            background-color: var(--primary-color);
+            border: 2px solid var(--primary-color);
+        }
+
+        .slider-btn-primary:hover {
+            background-color: transparent;
+            border-color: #fff;
+        }
+
+        .slider-btn-outline {
+            background-color: transparent;
+            border: 2px solid #fff;
+        }
+
+        .slider-btn-outline:hover {
+            background-color: rgba(255,255,255,0.1);
+        }
+
+        .carousel-control-prev,
+        .carousel-control-next {
+            width: 60px;
+            height: 60px;
+            background-color: rgba(255,255,255,0.2);
+            border-radius: 50%;
+            top: 50%;
+            transform: translateY(-50%);
+            margin: 0 20px;
+            transition: all 0.3s ease;
+        }
+
+        .carousel-control-prev:hover,
+        .carousel-control-next:hover {
+            background-color: var(--primary-color);
+        }
+
+        .carousel-indicators {
+            margin-bottom: 2rem;
+        }
+
+        .carousel-indicators button {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            margin: 0 5px;
+            border: 2px solid #fff;
+            background-color: transparent;
+        }
+
+        .carousel-indicators button.active {
+            background-color: var(--primary-color);
+            border-color: var(--primary-color);
+        }
+
+        /* Адаптивность для слайдера */
+        @media (max-width: 768px) {
+            .hero-slider,
+            .carousel-item {
+                height: 500px;
+            }
+
+            .carousel-caption {
+                padding: 1rem;
+                text-align: center;
+            }
+
+            .carousel-caption h1 {
+                font-size: 2.5rem;
+            }
+
+            .carousel-caption p {
+                font-size: 1rem;
+            }
+
+            .carousel-control-prev,
+            .carousel-control-next {
+                width: 50px;
+                height: 50px;
+                margin: 0 10px;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .hero-slider,
+            .carousel-item {
+                height: 400px;
+            }
+
+            .carousel-caption h1 {
+                font-size: 2rem;
+            }
+
+            .slider-btn {
+                padding: 0.6rem 1.5rem;
+                font-size: 1rem;
+            }
+        }
+
+        .header {
+            z-index: 1030;
+        }
+
+        .hero-section {
+            margin-top: 76px; /* Высота шапки */
+        }
+    </style>
+
+    <link rel="icon" type="image/x-icon" href="https://via.placeholder.com/32/0d6efd/FFFFFF?text=BS">
+</head>
+<body>
+    <!-- Шапка сайта -->
+    <header class="header fixed-top bg-white shadow-sm" id="header">
+        <nav class="navbar navbar-expand-lg py-3">
+            <div class="container">
+                <!-- Логотип -->
+                <a class="navbar-brand fw-bold fs-3 text-primary d-flex align-items-center" href="#">
+                    <i class="bi bi-rocket-takeoff me-2"></i>
+                    <span class="d-none d-md-inline">НазваниеКомпании</span>
+                    <span class="d-inline d-md-none">НК</span>
+                </a>
+
+                <!-- Бургер-кнопка для мобильных -->
+                <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" 
+                        aria-controls="navbarNav" aria-expanded="false" aria-label="Переключить навигацию">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Основное меню -->
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link fw-medium active" href="#"><i class="bi bi-briefcase me-1"></i> Услуги</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link fw-medium" href="#"><i class="bi bi-info-circle me-1"></i> О нас</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link fw-medium" href="#"><i class="bi bi-images me-1"></i> Портфолио</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link fw-medium" href="#"><i class="bi bi-journal-text me-1"></i> Блог</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link fw-medium" href="#"><i class="bi bi-telephone me-1"></i> Контакты</a>
+                        </li>
+                    </ul>
+
+                    <!-- Кнопки авторизации -->
+                    <div class="d-flex align-items-center gap-2">
+                        <button class="btn btn-outline-primary btn-sm px-3" data-bs-toggle="modal" data-bs-target="#loginModal">
+                            <i class="bi bi-box-arrow-in-right"></i>
+                            <span class="d-none d-md-inline ms-1">Вход</span>
+                        </button>
+                        <button class="btn btn-primary btn-sm px-3" data-bs-toggle="modal" data-bs-target="#registerModal">
+                            <i class="bi bi-person-plus"></i>
+                            <span class="d-none d-md-inline ms-1">Регистрация</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Слайдер (заменяет герой-секцию) -->
+    <section class="hero-slider hero-section">
+        <div id="mainSlider" class="carousel slide" data-bs-ride="carousel">
+            <!-- Индикаторы -->
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#mainSlider" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Слайд 1"></button>
+                <button type="button" data-bs-target="#mainSlider" data-bs-slide-to="1" aria-label="Слайд 2"></button>
+                <button type="button" data-bs-target="#mainSlider" data-bs-slide-to="2" aria-label="Слайд 3"></button>
+            </div>
+
+            <!-- Слайды -->
+            <div class="carousel-inner">
+                <!-- Слайд 1 -->
+                <div class="carousel-item active">
+                    <div class="container">
+                        <div class="carousel-caption">
+                            <h1>Инновационные решения для вашего бизнеса</h1>
+                            <p class="text-white">Мы предоставляем современные технологии и стратегии для роста и развития вашей компании. Доверьтесь профессионалам.</p>
+                            <div class="d-flex flex-wrap gap-3">
+                                <a href="#" class="btn slider-btn slider-btn-primary text-white">Начать сотрудничество</a>
+                                <a href="#" class="btn slider-btn slider-btn-outline text-white">Смотреть портфолио</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Слайд 2 -->
+                <div class="carousel-item">
+                    <div class="container">
+                        <div class="carousel-caption">
+                            <h1>Эксперты в digital-технологиях</h1>
+                            <p class="text-white">Разработка, дизайн и продвижение - все в одном месте. Полный цикл услуг для вашего цифрового успеха.</p>
+                            <div class="d-flex flex-wrap gap-3">
+                                <a href="#" class="btn slider-btn slider-btn-primary text-white">Наши услуги</a>
+                                <a href="#" class="btn slider-btn slider-btn-outline text-white">Заказать консультацию</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Слайд 3 -->
+                <div class="carousel-item">
+                    <div class="container">
+                        <div class="carousel-caption">
+                            <h1>Превращаем идеи в реальность</h1>
+                            <p class="text-white">Более 500 успешных проектов по всему миру. Присоединяйтесь к нашим довольным клиентам уже сегодня.</p>
+                            <div class="d-flex flex-wrap gap-3">
+                                <a href="#" class="btn slider-btn slider-btn-primary text-white">Посмотреть кейсы</a>
+                                <a href="#" class="btn slider-btn slider-btn-outline text-white">Связаться с нами</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Кнопки навигации -->
+            <button class="carousel-control-prev" type="button" data-bs-target="#mainSlider" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Предыдущий</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#mainSlider" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Следующий</span>
+            </button>
+        </div>
+    </section>
+
+    <!-- Основное содержимое -->
+    <main>
+        <!-- Секция "Преимущества" -->
+        <section class="py-5 py-lg-6 bg-light">
+            <div class="container">
+                <div class="text-center mb-5">
+                    <h2 class="display-5 fw-bold mb-3">Почему выбирают нас?</h2>
+                    <p class="lead text-muted mx-auto" style="max-width: 700px;">
+                        Три ключевых преимущества, которые выделяют вас на фоне конкурентов.
+                    </p>
+                </div>
+
+                <div class="row g-4">
+                    <div class="col-md-4">
+                        <div class="card h-100 border-0 shadow-sm hover-shadow transition-all">
+                            <div class="card-body text-center p-4 p-lg-5">
+                                <div class="icon-wrapper bg-primary bg-opacity-10 text-primary rounded-circle p-4 mb-4 mx-auto" style="width: 80px; height: 80px;">
+                                    <i class="bi bi-lightning-charge-fill fs-2"></i>
+                                </div>
+                                <h3 class="h4 fw-bold mb-3">Быстро и эффективно</h3>
+                                <p class="text-muted mb-0">
+                                    Описание первого важного преимущества вашей компании или услуги. 
+                                    Экономьте время с нашими решениями.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="card h-100 border-0 shadow-sm hover-shadow transition-all">
+                            <div class="card-body text-center p-4 p-lg-5">
+                                <div class="icon-wrapper bg-success bg-opacity-10 text-success rounded-circle p-4 mb-4 mx-auto" style="width: 80px; height: 80px;">
+                                    <i class="bi bi-shield-check fs-2"></i>
+                                </div>
+                                <h3 class="h4 fw-bold mb-3">Надежность</h3>
+                                <p class="text-muted mb-0">
+                                    Описание гарантии качества, безопасности или стабильности. 
+                                    Ваши данные в полной безопасности.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="card h-100 border-0 shadow-sm hover-shadow transition-all">
+                            <div class="card-body text-center p-4 p-lg-5">
+                                <div class="icon-wrapper bg-warning bg-opacity-10 text-warning rounded-circle p-4 mb-4 mx-auto" style="width: 80px; height: 80px;">
+                                    <i class="bi bi-headset fs-2"></i>
+                                </div>
+                                <h3 class="h4 fw-bold mb-3">Поддержка 24/7</h3>
+                                <p class="text-muted mb-0">
+                                    Всегда на связи, чтобы помочь с любыми вопросами и проблемами. 
+                                    Наша команда всегда готова помочь.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Информационная секция с призывом к действию -->
+        <section class="py-5 py-lg-6">
+            <div class="container">
+                <div class="row align-items-center g-5">
+                    <div class="col-lg-6">
+                        <div class="info-image bg-gradient-primary rounded-3 p-4 p-lg-5 text-center">
+                            <i class="bi bi-graph-up-arrow text-white" style="font-size: 8rem;"></i>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <h2 class="display-6 fw-bold mb-4">Заголовок для призыва к действию или информации</h2>
+                        <p class="text-muted mb-4">
+                            Более подробный текст о вашей миссии, проекте или услуге. Объясните, почему клиенты 
+                            должны выбрать именно вас и какие результаты они получат.
+                        </p>
+
+                        <ul class="list-unstyled mb-4">
+                            <li class="mb-2">
+                                <i class="bi bi-check-circle-fill text-success me-2"></i>
+                                <span>Пункт первый преимущества с подробным описанием</span>
+                            </li>
+                            <li class="mb-2">
+                                <i class="bi bi-check-circle-fill text-success me-2"></i>
+                                <span>Пункт второй преимущества с подробным описанием</span>
+                            </li>
+                            <li class="mb-2">
+                                <i class="bi bi-check-circle-fill text-success me-2"></i>
+                                <span>Пункт третий преимущества с подробным описанием</span>
+                            </li>
+                            <li class="mb-2">
+                                <i class="bi bi-check-circle-fill text-success me-2"></i>
+                                <span>Пункт четвертый преимущества с подробным описанием</span>
+                            </li>
+                        </ul>
+
+                        <div class="d-flex flex-wrap gap-3">
+                            <a href="#" class="btn btn-primary btn-lg px-4">
+                                <i class="bi bi-play-circle me-2"></i>Начать бесплатно
+                            </a>
+                            <a href="#" class="btn btn-outline-primary btn-lg px-4">
+                                <i class="bi bi-info-circle me-2"></i>Подробнее
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Подвал сайта -->
+    <footer class="bg-dark text-white py-5">
+        <div class="container">
+            <div class="row g-4">
+                <!-- Бренд -->
+                <div class="col-lg-4">
+                    <a class="navbar-brand fw-bold fs-3 text-white d-flex align-items-center mb-3" href="#">
+                        <i class="bi bi-rocket-takeoff me-2"></i>
+                        НазваниеКомпании
+                    </a>
+                    <p class="text-white-50 mb-4">
+                        Краткий слоган или описание миссии компании. Мы помогаем бизнесу расти 
+                        и развиваться с помощью современных технологий.
+                    </p>
+                    <div class="social-icons d-flex gap-3">
+                        
