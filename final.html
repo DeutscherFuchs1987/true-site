@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="ru" data-bs-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Сад СибНИИСХоза | Омск | Саженцы и посадочный материал</title>
+
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+    <!-- Шрифты -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Open+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+
+    <!-- Кастомные стили для садового центра -->
+    <style>
+        :root {
+            --primary-green: #2e7d32;
+            --secondary-green: #388e3c;
+            --light-green: #a5d6a7;
+            --accent-brown: #8d6e63;
+            --light-beige: #f5f5f5;
+        }
+
+        body {
+            font-family: 'Open Sans', sans-serif;
+            color: #333;
+            padding-top: 76px; /* Для фиксированной шапки */
+        }
+
+        h1, h2, h3, h4, h5, .fw-bold {
+            font-family: 'Montserrat', sans-serif;
+            color: var(--primary-green);
+        }
+
+        /* Стили для шапки */
+        .navbar-brand {
+            color: var(--primary-green) !important;
+        }
+
+        .nav-link.active {
+            color: var(--primary-green) !important;
+            font-weight: 600;
+            border-bottom: 2px solid var(--primary-green);
+        }
+
+        /* Герой-секция с фоновым изображением сада */
+        .hero-section {
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.4)), 
+                        url('https://images.unsplash.com/photo-1591288497594-42d1f277d3dc?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 120px 0;
+            margin-bottom: 60px;
+        }
+
+        /* Секции */
+        .section-title {
+            position: relative;
+            padding-bottom: 15px;
+            margin-bottom: 40px;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 60px;
+            height: 3px;
+            background-color: var(--primary-green);
+        }
+
+        /* Карточки товаров */
+        .product-card {
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            overflow: hidden;
+            transition: all 0.3s ease;
+            height: 100%;
+        }
+
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+            border-color: var(--light-green);
+        }
+
+        .product-card-img {
+            height: 200px;
+            overflow: hidden;
+        }
+
+        .product-card-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .product-price {
+            color: var(--primary-green);
+            font-weight: 700;
+            font-size: 1.2rem;
+        }
+
+        /* Кнопки */
+        .btn-primary {
+            background-color: var(--primary-green);
+            border-color: var(--primary-green);
+        }
+
+        .btn-primary:hover {
+            background-color: var(--secondary-green);
+            border-color: var(--secondary-green);
+        }
+
+        .btn-outline-primary {
+            color: var(--primary-green);
+            border-color: var(--primary-green);
+        }
+
+        .btn-outline-primary:hover {
+            background-color: var(--primary-green);
+            border-color: var(--primary-green);
+        }
+
+        /* Блок преимуществ */
+        .feature-icon {
+            width: 70px;
+            height: 70px;
+            background-color: rgba(46, 125, 50, 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+
+        .feature-icon i {
+            font-size: 1.8rem;
+            color: var(--primary-green);
+        }
+
+        /* Подвал */
+        footer {
+            background-color: #2c3e50;
+            color: white;
+        }
+
+        footer a {
+            color: #ddd;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        footer a:hover {
+            color: white;
+        }
+
+        .footer-contact i {
+            color: var(--light-green);
+            margin-right: 10px;
+        }
+
+        /* Адаптивность */
+        @media (max-width: 768px) {
+            .hero-section {
+                padding: 80px 0;
+                text-align: center;
+            }
+            
+            .hero-section h1 {
+                font-size: 2.2rem;
+            }
+            
+            .product-card-img {
+                height: 180px;
+            }
+        }
+    </style>
+
+    <link rel="icon" type="image/x-icon" href="https://via.placeholder.com/32/2e7d32/FFFFFF?text=S">
+</head>
+<body>
+    <!-- Шапка сайта -->
+    <header class="header fixed-top bg-white shadow-sm" id="header">
+        <nav class="navbar navbar-expand-lg py-3">
+            <div class="container">
+                <!-- Логотип -->
+                <a class="navbar-brand fw-bold fs-3 d-flex align-items-center" href="#">
+                    <i class="bi bi-tree me-2"></i>
+                    <span>Сад СибНИИСХоза</span>
+                </a>
+
+                <!-- Бургер-кнопка для мобильных -->
+                <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" 
+                        aria-controls="navbarNav" aria-expanded="false" aria-label="Переключить навигацию">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Основное меню -->
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link fw-medium active" href="#"><i class="bi bi-shop me-1"></i> Саженцы</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link fw-medium" href="#about"><i class="bi bi-info-circle me-1"></i> О нас</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link fw-medium" href="#contacts"><i class="bi bi-geo-alt me-1"></i> Контакты</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link fw-medium" href="#news"><i class="bi bi-newspaper me-1"></i> Новости</a>
+                        </li>
+                    </ul>
+
+                    <!-- Контактный телефон -->
+                    <div class="d-flex align-items-center gap-3">
+                        <div class="d-none d-md-block text-end">
+                            <div class="fw-bold text-primary">48-26-90</div>
+                            <small class="text-muted">Консультант</small>
+                        </div>
+                        <a href="tel:+74812690" class="btn btn-primary btn-sm px-3">
+                            <i class="bi bi-telephone me-1"></i> Заказать звонок
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Основное содержимое -->
+    <main>
+        <!-- Герой-секция -->
+        <section class="hero-section">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-7">
+                        <h1 class="display-4 fw-bold mb-4">Качественные саженцы для вашего сада в Омске</h1>
+                        <p class="lead mb-4">
+                            С 1945 года выращиваем плодово-ягодные и декоративные культуры, адаптированные к сибирским условиям. 
+                            Более 40 культур в ассортименте.
+                        </p>
+                        <div class="d-flex flex-wrap gap-3">
+                            <a href="#products" class="btn btn-primary btn-lg px-4 py-3">
+                                <i class="bi bi-cart3 me-2"></i>Смотреть каталог
+                            </a>
+                            <a href="#contacts" class="btn btn-outline-light btn-lg px-4 py-3">
+                                <i class="bi bi-geo-alt me-2"></i>Наши садовые центры
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Секция "Популярные категории" -->
+        <section class="py-5" id="products">
+            <div class="container">
+                <h2 class="section-title display-6 fw-bold">Популярные категории саженцев</h2>
+                <p class="lead text-muted mb-5">Широкий ассортимент саженцев с закрытой корневой системой для легкой приживаемости[citation:4]</p>
+
+                <div class="row g-4">
+                    <!-- Карточка 1: Плодово-ягодные -->
+                    <div class="col-md-6 col-lg-3">
+                        <div class="product-card">
+                            <div class="product-card-img">
+                                <img src="https://images.unsplash.com/photo-1615485290382-441e4d049cb5?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Плодово-ягодные культуры">
+                            </div>
+                            <div class="card-body p-4">
+                                <h3 class="h5 fw-bold mb-2">Плодово-ягодные культуры</h3>
+                                <p class="text-muted mb-3">Яблони, груши, вишни, сливы, жимолость, смородина, малина, земляника[citation:4]</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <span class="product-price">От 150 ₽</span>
+                                    <a href="#" class="btn btn-sm btn-outline-primary">Подробнее</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Карточка 2: Декоративные кустарники -->
+                    <div class="col-md-6 col-lg-3">
+                        <div class="product-card">
+                            <div class="product-card-img">
+                                <img src="https://images.unsplash.com/photo-1585320806297-9794b3e4eeae?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Декоративные кустарники">
+                            </div>
+                            <div class="card-body p-4">
+                                <h3 class="h5 fw-bold mb-2">Декоративные кустарники</h3>
+                                <p class="text-muted mb-3">Спиреи, гортензии, пузыреплодники, барбарисы, дерены[citation:4]</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <span class="product-price">От 220 ₽</span>
+                                    <a href="#" class="btn btn-sm btn-outline-primary">Подробнее</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Карточка 3: Хвойные растения -->
+                    <div class="col-md-6 col-lg-3">
+                        <div class="product-card">
+                            <div class="product-card-img">
+                                <img src="https://images.unsplash.com/photo-1604881991720-fb6471160c7d?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Хвойные растения">
+                            </div>
+                            <div class="card-body p-4">
+                                <h3 class="h5 fw-bold mb-2">Хвойные растения</h3>
+                                <p class="text-muted mb-3">Туи, можжевельники, сосны, ели, лиственницы[citation:4]</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <span class="product-price">От 280 ₽</span>
+                                    <a href="#" class="btn btn-sm btn-outline-primary">Подробнее</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Карточка 4: Многолетние цветы -->
+                    <div class="col-md-6 col-lg-3">
+                        <div class="product-card">
+                            <div class="product-card-img">
+                                <img src="https://images.unsplash.com/photo-1560717782-9f50a4f1f2c0?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Многолетние цветы">
+                            </div>
+                            <div class="card-body p-4">
+                                <h3 class="h5 fw-bold mb-2">Многолетние цветы</h3>
+                                <p class="text-muted mb-3">Пионы, лилейники, хосты, флоксы, гейхеры[citation:4]</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <span class="product-price">От 170 ₽</span>
+                                    <a href="#" class="btn btn-sm btn-outline-primary">Подробнее</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Секция "О нас" -->
+        <section class="py-5 bg-light" id="about">
+            <div class="container">
+                <div class="row align-items-center g-5">
+                    <div class="col-lg-6">
+                        <h2 class="section-title display-6 fw-bold">Сад с историей с 1945 года</h2>
+                        <p class="mb-4">
+                            Первые посадки плодово-ягодных деревьев и кустарников в нашем саду были произведены весной 1945 года[citation:1]. 
+                            Мы являемся частью Сибирского научно-исследовательского института сельского хозяйства, который ведёт свою историю с 1828 года[citation:1].
+                        </p>
+                        <p class="mb-4">
+                            Наша миссия — изучение морфологии и зимостойкости сортов в сибирских условиях для выделения наиболее перспективных культур в зоне рискованного земледелия[citation:1].
+                        </p>
+                        
+                        <div class="row mt-4">
+                            <div class="col-md-6">
+                                <div class="feature-icon mx-auto">
+                                    <i class="bi bi-flower1"></i>
+                                </div>
+                                <h4 class="h5 fw-bold text-center">Более 40 культур</h4>
+                                <p class="text-muted text-center small">Изучаем и выращиваем разнообразные растения[citation:1]</p>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="feature-icon mx-auto">
+                                    <i class="bi bi-award"></i>
+                                </div>
+                                <h4 class="h5 fw-bold text-center">Научный подход</h4>
+                                <p class="text-muted text-center small">Используем современные технологии выращивания[citation:1]</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-lg-6">
+                        <div class="bg-white rounded-3 p-4 shadow-sm">
+                            <h3 class="h4 fw-bold mb-3">Наши направления работы</h3>
+                            <ul class="list-unstyled">
+                                <li class="mb-2">
+                                    <i class="bi bi-check-circle-fill text-success me-2"></i>
+                                    <span>Селекция и изучение новых сортов плодово-ягодных культур[citation:1]</span>
+                                </li>
+                                <li class="mb-2">
+                                    <i class="bi bi-check-circle-fill text-success me-2"></i>
+                                    <span>Размножение декоративных культур и хвойных растений[citation:1]</span>
+                                </li>
+                                <li class="mb-2">
+                                    <i class="bi bi-check-circle-fill text-success me-2"></i>
+                                    <span>Изучение технологий капельного полива и автоматизации[citation:1]</span>
+                                </li>
+                                <li class="mb-2">
+                                    <i class="bi bi-check-circle-fill text-success me-2"></i>
+                                    <span>Выращивание саженцев с закрытой корневой системой[citation:4]</span>
+                                </li>
+                                <li class="mb-2">
+                                    <i class="bi bi-check-circle-fill text-success me-2"></i>
+                                    <span>Консультации для садоводов Омска и области</span>
+                                </li>
+                            </ul>
+                            <div class="mt-4">
+                                <a href="#" class="btn btn-primary">
+                                    <i class="bi bi-journal-text me-2"></i>Подробнее об истории института
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Секция "Контакты" -->
+        <section class="py-5" id="contacts">
+            <div class="container">
+                <h2 class="section-title display-6 fw-bold">Наши садовые центры в Омске</h2>
+                <p class="lead text-muted mb-5">Приезжайте за качественным посадочным материалом[citation:2][citation:4]</p>
+
+                <div class="row g-4">
+                    <!-- Контакт 1 -->
+                    <div class="col-md-4">
+                        <div class="card h-100 border-0 shadow-sm">
+                            <div class="card-body p-4">
+                                <h3 class="h5 fw-bold mb-3">пр. Королева, 28А</h3>
+                                <div class="footer-contact mb-3">
+                                    <p class="mb-2">
+                                        <i class="bi bi-clock"></i>
+                                        <span>Ежедневно: 9:00–18:00 (без обеда и выходных)[citation:4]</span>
+                                    </p>
+                                    <p class="mb-2">
+                                        <i class="bi bi-telephone"></i>
+                                        <span>Телефон: <a href="tel:482690">48-26-90</a> (консультант)[citation:2]</span>
+                                    </p>
+                                </div>
+                                <div class="mt-4">
+                                    <a href="#" class="btn btn-outline-primary w-100">
+                                        <i class="bi bi-map me-2"></i>Проложить маршрут
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Контакт 2 -->
+                    <div class="col-md-4">
+                        <div class="card h-100 border-0 shadow-sm">
+                            <div class="card-body p-4">
+                                <h3 class="h5 fw-bold mb-3">Красноярский тракт, 20В</h3>
+    
